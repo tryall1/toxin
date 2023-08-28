@@ -1,0 +1,135 @@
+@import 'reset-css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.container {
+    padding-left: 9.72%;
+    padding-right: 9.72%;
+    margin: 0 auto 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    font-family: Montserrat;
+
+    .navbar {
+        margin-left: auto;
+    }
+
+    .nav_items {
+        display:flex;
+        flex-direction: row;
+    }
+
+    li.nav__item {
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .nav__link, .auth {
+        color: var(--dark-50, rgba(31, 32, 65, 0.50));
+        font-family: Montserrat; //Убрать если везде одинаково
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+    }
+
+    .nav__link--active {
+        color: rgba(31, 32, 65, 0.75);
+        font-weight: 700;
+    }
+
+    .nav__item:last-child {
+        margin-right: 0px;
+    }
+
+    .auth {
+        padding-left: 20px;
+    }
+
+    .auth__separator {
+        width: 1px;
+        height: 30px;
+        background-color: var(--dark-10, rgba(31, 32, 65, 0.10));
+        margin-left: 20px;
+    }
+
+    .expander-icon {
+        background: url('../assets/images/expand_more.svg') top no-repeat;
+        width: 24px;
+        height: 8px;
+        display: inline-block;
+        margin-left: 2px;
+    }
+
+    .button {
+        border-radius: 20px;
+        margin-left: 21px;
+        border: none;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 10px 20px;
+        font-family: Montserrat; // не работает почему то на уровне хэдэра
+        font-weight: 700;
+        box-sizing: border-box;
+    }
+
+    .button--unfilled {
+        position: relative;
+        background-color: white;
+        color: var(--primary-color, #BC9CFF);
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        padding: 8px 18.5px;
+    }
+
+    .button--unfilled::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 20px;
+        z-index: -1;
+    }
+
+    .button--filled {
+        background: var(--primary-gradient, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%));
+        color: #FFF;
+        margin-right: 0px;
+    }
+
+    .nav__submenu {
+        position: absolute;
+        margin: 8px 0 0 2px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.6s, visibility 0.6s;
+    }
+
+    .nav__item:hover .nav__submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav__subitem {
+        margin-top: 4%;
+    }
+
+    .nav__sublink {
+        @extend .nav__link;
+        text-decoration: underline;
+        font-size: 12px;
+    }
+
+    .nav__sublink:hover {
+        text-decoration: none;
+    }
+}
