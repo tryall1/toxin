@@ -119,6 +119,11 @@
         visibility: visible;
     }
 
+    .nav__item:hover .expander-icon {
+        transform: rotate(180deg);
+        transition: transform 0.5s;
+    }
+
     .nav__subitem {
         margin-top: 4%;
     }
