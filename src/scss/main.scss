@@ -1,25 +1,36 @@
 @import 'reset-css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+$font-family-default: Montserrat;
+$dark-100: var(--dark-100, #1F2041);
+$dark-75: var(--dark-75, rgba(31, 32, 65, 0.75));
+$dark-50: rgba(31, 32, 65, 0.50);
+$dark-25: var(--dark-25, rgba(31, 32, 65, 0.25));
+$dark-5: rgba(31, 32, 65, 0.05);
+$purple: var(--primary-color, #BC9CFF);
+$green: var(--secondary-color, #6FCF97);
+
+$primary-color: #BC9CFF;
+
 .container {
-    padding-left: 9.72%;
-    padding-right: 9.72%;
-    margin: 0 auto 0 auto;
+  padding-left: 9.72%;
+  padding-right: 9.72%;
+  margin: 0 auto;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    font-family: Montserrat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  font-family: $font-family-default;
 
     .navbar {
         margin-left: auto;
     }
 
     .nav_items {
-        display:flex;
+        display: flex;
         flex-direction: row;
     }
 
@@ -29,12 +40,8 @@
     }
 
     .nav__link, .auth {
-        color: var(--dark-50, rgba(31, 32, 65, 0.50));
-        font-family: Montserrat; //Убрать если везде одинаково
+        color: $dark-50;
         font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         text-decoration: none;
     }
 
@@ -73,7 +80,7 @@
         cursor: pointer;
         font-size: 12px;
         padding: 10px 20px;
-        font-family: Montserrat; // не работает почему то на уровне хэдэра
+        font-family: $font-family-default;
         font-weight: 700;
         box-sizing: border-box;
     }
