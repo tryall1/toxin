@@ -1,0 +1,3 @@
+mixin icon(name, width='24px', height='24px')
+  - const filepath=require(`/src/assets/images/${name}.svg`)
+  object(type="image/svg+xml" data=filepath width=width height=height)

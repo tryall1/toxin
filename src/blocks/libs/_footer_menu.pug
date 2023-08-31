@@ -1,0 +1,7 @@
+mixin footer__menu (name='Меню', items='')
+    section.footer__menu
+            .footer__header=name
+            ul.footer__items 
+                each item in items
+                    li.footer__item
+                        a.footer_link(href=item.link)=item.name

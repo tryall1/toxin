@@ -10,6 +10,15 @@ $dark-5: rgba(31, 32, 65, 0.05);
 $purple: var(--primary-color, #BC9CFF);
 $green: var(--secondary-color, #6FCF97);
 
+p, a {
+    color: $dark-50;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
 $primary-color: #BC9CFF;
 
 .container {
@@ -143,5 +152,111 @@ $primary-color: #BC9CFF;
 
     .nav__sublink:hover {
         text-decoration: none;
+    }
+}
+
+.footer {
+    padding: 100px 0 0 0;
+    display: grid;
+    grid-template-columns: 260px repeat(3, 1fr) 260px;
+    grid-column-gap: 3.44%;
+    grid-template-rows: 1fr;
+    font-family: $font-family-default;
+    font-size: 14px;
+
+    .footer__text {
+        font-family: $font-family-default;
+        color: $dark-75;
+        line-height: 24px;
+    }
+
+    .footer__link {
+        line-height: 24px;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    &__about {
+        .footer__text {
+            margin-top:15px;
+            
+        }
+    }
+
+    &__menu {
+        padding-bottom: 100px;
+        //line-height: normal;
+        .footer__link {
+            font-weight: 400;
+            font-size: 14px;
+        }
+    }
+
+    &__item {
+        margin-top: 24px;
+    }
+
+    &__header {
+        color: $dark-100;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 2;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-top: 4px;
+    }
+
+    &__subscribe {
+        .footer__text {
+            margin: 19px 0 23px 0;
+        }
+
+        .footer__form {
+            position: relative;
+            width: 100%;
+
+            .footer__input {
+                flex-grow: 1;
+                border-right: none;
+                min-width: 260px;
+                height: 42px;
+                border-radius: 5px;
+                border: 1px solid rgba(31, 32, 65, 0.25);
+                padding: 9px 0 9px 15px;
+                box-sizing: border-box;
+                font-size: 14px;
+                color: $dark-25;
+                line-height: 24px;
+                font-style: normal;
+                font-weight: 400;
+            }
+
+            .footer__button {
+                position: absolute;
+                right:0.1%;
+                top:0;
+                background: url('/src/assets/images/arrow_forward.svg') no-repeat center center;
+                width: 44px;
+                height: 44px;
+                border: none;
+            }
+        }
+    }
+
+    &__line {
+        align-self: end;
+        border-top: 1px solid #F4F4F6;
+        display: flex;
+        justify-content: space-between;
+        grid-row: 2;
+        grid-column: 1 / -1;
+        padding: 26px 0 26px 0;
+
+        .footer__social-item {
+            display: inline-block;
+            margin-left: 20px;
+        }
     }
 }

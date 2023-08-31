@@ -1,0 +1,32 @@
+- var first_menu = [{'name':'О нас', 'link':'/about-us'}, {'name':'Новости', 'link':'/news'}, {'name':'Служба поддержки', 'link':'/support'}, {'name':'Услуги', 'link':'/services'}];
+- var second_menu = [{'name':'О сервисе', 'link':'/about-service'}, {'name':'Наша команда', 'link':'/team'}, {'name':'Вакансии', 'link':'/jobs'}, {'name':'Инвесторы', 'link':'/investors'}];
+- var third_menu = [{'name':'Соглашения', 'link':'/terms'}, {'name':'Сообщества', 'link':'/community'}, {'name':'Связь с нами', 'link':'/contact'}];
+
+mixin footer(classes='footer')
+    .container
+        footer(class=classes)
+            section.footer__about
+                img(src=require('/src/assets/images/logo.svg')).logo
+                p.footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            +footer__menu('Навигация', first_menu)
+            +footer__menu('О нас', second_menu)
+            +footer__menu('Служба поддержки', third_menu)
+            section.footer__subscribe
+                .footer__header Подписка
+                p.footer__text Получайте специальные предложения и новости сервиса
+                form(action="/submit" method="post" class="footer__form")
+                    input(type="text" name="email" value="Email" class="footer__input")
+                    input(type="submit" class="footer__button" value="")
+            .footer__line 
+                p.footer__text Copyright © 2018 Toxin отель. Все права защищены.
+                section.footer__social 
+                    ul.footer__social-list 
+                        li.footer__social-item
+                            a(href="#" class="footer__social-link") 
+                                +icon('twitter', '24px', '24px')
+                        li.footer__social-item
+                            a(href="#" class="footer__social-link") 
+                                +icon('facebook', '24px', '24px')
+                        li.footer__social-item
+                            a(href="#" class="footer__social-link") 
+                                +icon('instagram', '24px', '24px')
