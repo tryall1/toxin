@@ -1,0 +1,132 @@
+@import 'reset-css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$font-family-default: Montserrat;
+$dark-100: var(--dark-100, #1F2041);
+$dark-75: var(--dark-75, rgba(31, 32, 65, 0.75));
+$dark-50: rgba(31, 32, 65, 0.50);
+$dark-25: var(--dark-25, rgba(31, 32, 65, 0.25));
+$dark-5: rgba(31, 32, 65, 0.05);
+$purple: var(--primary-color, #BC9CFF);
+$green: var(--secondary-color, #6FCF97);
+
+.ui__logo {
+    padding: 30px 0 0 30px;
+}
+
+.ui__wrapper {
+    display: grid;
+    grid-template-columns: 360px auto 360px;
+    grid-gap: 20%;
+    font-family: $font-family-default;
+}
+
+.field__wrapper {
+    width: 100%;
+}
+
+.form__date {
+    display: flex;
+    
+    .field__wrapper:first-child {
+        margin-right: 20px;
+    }
+
+    .field {
+        color: var(--dark-75, rgba(31, 32, 65, 0.75));
+    }
+}
+
+.field__heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field {
+    line-height: 18px;
+    padding: 13px 0 13px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: $font-family-default;
+    border:1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 8px;
+    color: $dark-25;
+}
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+      color: $color;
+    }
+    &::placeholder {
+      color: $color;
+    }
+    &::-ms-input-placeholder {
+      color: $color;
+    }
+}
+
+.field {
+    @include placeholder(var(--dark-25, rgba(31, 32, 65, 0.25)));
+}
+
+.field-hover {
+    border: 1px solid var(--dark-50, rgba(31, 32, 65, 0.50));
+    @include placeholder(var(--dark-75, rgba(31, 32, 65, 0.75)));
+}
+
+.field:hover,
+.field:focus {
+    border: 1px solid var(--dark-50, rgba(31, 32, 65, 0.50));
+    @include placeholder(var(--dark-75, rgba(31, 32, 65, 0.75)));
+}
+
+.field__label {
+    color:$dark-100;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.field__label:nth-child(2) {
+    font-size: 12px;
+    color: $dark-50;
+    font-weight: 400;
+}
+
+.field__label-hover {
+    color: $dark-75;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ui__header {
+    height: 143px;
+}
+
+.field__wrapper {
+    margin-bottom: 20.5px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: relative;
+    right: 15px;
+    background: url('../assets/images/expand_more.svg') 70% 50% no-repeat;
+}
+
+.dropdown__list {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;  
+    background: url('../assets/images/expand_more.svg') 95% 50% no-repeat;
+    font-family: $font-family-default;
+    color: $dark-75;
+}
+
+.field-masked {
+    text-transform: uppercase;
+}
+
