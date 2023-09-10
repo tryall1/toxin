@@ -8,7 +8,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
     body 
-        header.ui__header
+        header.form_elements
             .ui__logo
                 +icon('Group', '42px','42px')
         div.container 
@@ -50,5 +50,5 @@ html(lang="en")
                     .field__wrapper
                             .field__heading
                                 label(for='date').field__label Filter Date dropdown
-                            input(type="text", name="first_date" id="date_range").field.field-masked
+                            input(type="text", name="date_range" id="date_range").field.date_range
                 section.checkboxes 

@@ -6,5 +6,7 @@ import "air-datepicker/air-datepicker.css";
 
 new AirDatepicker('#date_range', {
     range: true,
-    multipleDatesSeparator: ' - '
+    multipleDatesSeparator: ' - ',
+    dateFormat: 'dd MMM',
+    selectedDates: ['2023-08-19','2023-08-23']
 })
