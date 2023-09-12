@@ -10,12 +10,14 @@ const PAGES = fs
   .readdirSync(PAGES_DIR)
   .map((item) => item.replace(/\.[^/.]+$/, ''))
 const PATHS = {
-  src: path.join(__dirname, './src'),
-  dist: path.join(__dirname, './dist'),
+  src: path.join(__dirname, '/src'),
+  dist: path.join(__dirname, '/dist'),
 }
 
 const entryPoints = PAGES.map(page => ({ [page]: `${PAGES_DIR}/${page}/index.js`, }));
 const entryPointsCorrect = Object.assign({}, ...entryPoints);
+
+console.log('PATHS.src:', PATHS.src);
 
 module.exports = {
     mode: 'production',
@@ -24,6 +26,13 @@ module.exports = {
         filename: filename('js'),
         path: PATHS.dist,
         clean: true,
+    },
+    resolve: {
+        alias: {
+            '@variables': path.resolve(__dirname, `${PATHS.src}/styles/variables.scss`), //не работает
+            
+            'blocks': path.resolve(__dirname, '/src/blocks'),
+        },
     },
     performance: {
         hints: false,
@@ -38,6 +47,7 @@ module.exports = {
             directory: path.join(__dirname, 'dist')
         }
     },
+
     plugins: [
         ...PAGES.map(
             (page) =>
@@ -57,13 +67,6 @@ module.exports = {
             filename: filename('css'),
         })
     ],
-
-    resolve: {
-        alias: {
-          '@variables': path.resolve(__dirname, `${PATHS.src}/styles/variables.scss`),
-          'blocks': path.resolve(__dirname, `${PATHS.src}/blocks`),
-        },
-    },
 
     module: {
         rules: [

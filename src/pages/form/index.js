@@ -1,1 +1,2 @@
-import './form.scss'
+import './form.scss';
+import '../../blocks/field-heading';

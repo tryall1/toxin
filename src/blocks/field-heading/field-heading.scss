@@ -1,0 +1,21 @@
+@import '/src/styles/variables.scss';
+
+.field__heading {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+    .field__title {
+        color:$dark-100;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    
+    .field__description {
+        font-size: 14px;
+        color: $dark-50;
+        font-weight: 400;
+    }
+}
+
