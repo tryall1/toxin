@@ -1,0 +1,39 @@
+@import '/src/styles/variables.scss';
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+      color: $color;
+    }
+    &::placeholder {
+      color: $color;
+    }
+    &::-ms-input-placeholder {
+      color: $color;
+    }
+}
+
+.field__input {
+    width:100%;
+    line-height: 18px;
+    padding: 13px 0 13px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: $font-family-default;
+    border:1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    color: $dark-25;
+
+    &-hover {
+        border: 1px solid var(--dark-50, rgba(31, 32, 65, 0.50));
+        @include placeholder(var(--dark-75, rgba(31, 32, 65, 0.75)));
+    }
+    
+    &__input:hover,
+    &__input:focus {
+        border: 1px solid var(--dark-50, rgba(31, 32, 65, 0.50));
+        @include placeholder(var(--dark-75, rgba(31, 32, 65, 0.75)));
+    }
+
+}
+
+

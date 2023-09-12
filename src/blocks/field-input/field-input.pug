@@ -1,0 +1,10 @@
+mixin field-input(params = {})
+    -
+        const {
+            placeholder = 'Text',
+            name = 'text',
+            type = 'text',
+            hover = false,
+        } = params
+
+    input.field__input(placeholder=placeholder, type='text', name=name, class=hover ? 'field__input-hover':'')

@@ -1,5 +1,6 @@
 include ../../blocks/icon/icon
 include ../../blocks/field-heading/field-heading
+include ../../blocks/field-input/field-input
 
 doctype html
 html(lang="en")
@@ -16,10 +17,10 @@ html(lang="en")
                 section.fields
                     .field__wrapper
                         +field-heading('Text Field', 'Default')
-                        input(id='username', type='text', name='username' placeholder='Email').field
+                        +field-input({'placeholder': 'Email', 'name':'email', 'hover':false})
                     .field__wrapper
                         +field-heading('Text Field', 'Hover/Focus')
-                        input(id='username', type='text', name='username' placeholder='This is pretty awesome').field.field-hover
+                        +field-input({'placeholder': 'This is pretty awesome', 'name':'email', 'hover':true})
                     .field__wrapper
                         +field-heading('Dropdown')
                         select(name='guests').field.dropdown__list
