@@ -1,18 +1,29 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const fs = require('fs')
+const devMode = process.env.NODE_ENV === 'development';
+const filename = (ext) => (devMode ? `${ext}/[name].${ext}` : `${ext}/[name].[contenthash].${ext}`);
 
+const PAGES_DIR = path.resolve(__dirname, 'src/pages')
+const PAGES = fs
+  .readdirSync(PAGES_DIR)
+  .map((item) => item.replace(/\.[^/.]+$/, ''))
+const PATHS = {
+  src: path.join(__dirname, './src'),
+  dist: path.join(__dirname, './dist'),
+}
+
+const entryPoints = PAGES.map(page => ({ [page]: `${PAGES_DIR}/${page}/index.js`, }));
+const entryPointsCorrect = Object.assign({}, ...entryPoints);
 
 module.exports = {
     mode: 'production',
-    entry: {
-        filename: path.resolve(__dirname, 'src/index.js')
-    },
+    entry: entryPointsCorrect,
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        filename: filename('js'),
+        path: PATHS.dist,
         clean: true,
-        filename: 'index.js',
-        assetModuleFilename: '[name][ext]'
     },
     performance: {
         hints: false,
@@ -28,20 +39,31 @@ module.exports = {
         }
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/pug/pages/index.pug')
-        }),
-
-        new HtmlWebpackPlugin({
+        ...PAGES.map(
+            (page) =>
+              new HtmlWebpackPlugin({
+                filename: `${page}.html`,
+                template: `${PAGES_DIR}/${page}/${page}.pug`,
+                chunks: [page],
+              })
+          ),
+    
+        /*new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/pug/pages/ui.pug'),
             filename: 'ui.html',
         }),
-
+        */
         new MiniCssExtractPlugin({
-            filename: "main.css",
-            chunkFilename: "[id].css",
+            filename: filename('css'),
         })
     ],
+
+    resolve: {
+        alias: {
+          '@variables': path.resolve(__dirname, `${PATHS.src}/styles/variables.scss`),
+          'blocks': path.resolve(__dirname, `${PATHS.src}/blocks`),
+        },
+    },
 
     module: {
         rules: [

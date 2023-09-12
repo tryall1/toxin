@@ -1,0 +1,54 @@
+include ../../blocks/blocks
+include ../../blocks/libs/_libs.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        header.form_elements
+            .ui__logo
+                +icon('Group', '42px','42px')
+        div.container 
+            div.ui__wrapper
+                section.fields
+                    .field__wrapper
+                        .field__heading
+                            label(for='username').field__label Text Field
+                            label(for='username').field__label Default
+                        input(id='username', type='text', name='username' placeholder='Email').field
+                    .field__wrapper
+                        .field__heading
+                            label(for='username').field__label Text Field
+                            label(for='username').field__label.field__label-hover Hover/Focus
+                        input(id='username', type='text', name='username' placeholder='This is pretty awesome').field.field-hover
+                    .field__wrapper
+                        .field__heading
+                            label(for='guests').field__label Dropdown
+                        select(name='guests').field.dropdown__list
+                            option(value='', disabled, selected) Сколько гостей
+                            option(value='1').field 1
+                            option(value='2').field 2
+                            option(value='3').field 3
+                            option(value='4').field 4
+                            button.arrow
+                    .field__wrapper
+                        .field__heading
+                            label(for='date').field__label masked text field
+                        input(type="date", name="date").field.field-masked
+                    .form__date
+                        .field__wrapper
+                            .field__heading
+                                label(for='date').field__label Date dropdown
+                            input(type="date", name="first_date").field.field-masked
+                        .field__wrapper
+                            .field__heading
+                                label(for='date').field__label Date dropdown
+                            input(type="date", name="second_date" value="2019-08-19").field.field-masked
+                    .field__wrapper
+                            .field__heading
+                                label(for='date').field__label Filter Date dropdown
+                            input(type="text", name="date_range" id="date_range").field.date_range
+                section.checkboxes 
