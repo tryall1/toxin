@@ -12,6 +12,27 @@
     }
 }
 
+.field {
+  width: 100%;
+
+  .field__button {
+    position: absolute;
+    right:0.1%;
+    top:0;
+    background: url('/src/assets/images/arrow_forward.svg') no-repeat center center;
+    width: 44px;
+    height: 44px;
+    border: none;
+  }
+
+  &-subscr {
+    flex-grow: 1;
+    border-right: none;
+    max-width: 267px;
+    position: relative;
+  }
+}
+
 .field__input {
     width:100%;
     line-height: 18px;

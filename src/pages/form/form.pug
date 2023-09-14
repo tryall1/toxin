@@ -18,9 +18,10 @@ html(lang="en")
                     .field__wrapper
                         +field-heading('Text Field', 'Default')
                         +field-input({'placeholder': 'Email', 'name':'email', 'hover':false})
-                    .field__wrapper
-                        +field-heading('Text Field', 'Hover/Focus')
-                        +field-input({'name':'email', 'hover':true, 'value':'This is pretty awesome', 'masked': false})
+
+                    +field-heading('Text Field', 'Hover/Focus')
+                    +field-input({'name':'email', 'hover':true, 'value':'This is pretty awesome', 'masked': false})
+
                     .field__wrapper
                         +field-heading('Dropdown')
                         select(name='guests').field.dropdown__list
@@ -30,9 +31,10 @@ html(lang="en")
                             option(value='3').field 3
                             option(value='4').field 4
                             button.arrow
-                    .field__wrapper
-                        +field-heading('Masked text field')
-                        +field-input({'name':'email', 'hover':false, 'placeholder':'ДД.ММ.ГГГГ', 'masked': true})
+
+                    +field-heading('Masked text field')
+                    +field-input({'name':'email', 'hover':false, 'placeholder':'ДД.ММ.ГГГГ', 'masked': true})
+
                     .form__date
                         .field__wrapper
                             +field-heading('Date dropdown')
@@ -40,8 +42,10 @@ html(lang="en")
                         .field__wrapper
                             +field-heading('Date dropdown')
                             input(type="date", name="second_date" value="2019-08-19").field.field-masked
-                    .field__wrapper
-                            +field-heading('Filter Date dropdown')
-                            input(type="text", name="date_range" id="date_range").field.date_range
-                section.checkboxes 
+                    +field-heading('Filter Date dropdown')
+                    input(type="text", name="date_range" id="date_range").field.date_range
+
+                    +field-heading('Subscription text field')
+                    +field-input({'name':'email', 'placeholder':'Email', 'subscr':true})
+                section.checkboxes
                 section.forms

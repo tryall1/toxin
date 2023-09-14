@@ -31,22 +31,6 @@ $green: var(--secondary-color, #6FCF97);
     .field__wrapper:first-child {
         margin-right: 20px;
     }
-
-    .field {
-        color: var(--dark-75, rgba(31, 32, 65, 0.75));
-    }
-}
-
-
-.field {
-    line-height: 18px;
-    padding: 13px 0 13px 15px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: $font-family-default;
-    border:1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 8px;
-    color: $dark-25;
 }
 
 
@@ -63,9 +47,6 @@ $green: var(--secondary-color, #6FCF97);
     }
 }
 
-.field {
-    @include placeholder(var(--dark-25, rgba(31, 32, 65, 0.25)));
-}
 
 .field-hover {
     border: 1px solid var(--dark-50, rgba(31, 32, 65, 0.50));

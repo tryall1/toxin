@@ -8,12 +8,17 @@ mixin field-input(params = {})
             value = '',
             masked = false,
             required = true,
+            subscr=false,
         } = params
 
-    input.field__input(placeholder=placeholder, 
-        type='text', 
-        name=name, 
-        class=hover ? 'field__input-hover':'',
-        id=masked ? 'field__input-masked': '',
-        value=value
-        required)
+    .field
+        div(class= subscr ? 'field-subscr': '')
+            input.field__input(placeholder=placeholder, 
+                type='text', 
+                name=name, 
+                class= hover ? 'field__input-hover': '',
+                id=masked ? 'field__input-masked': '',
+                value=value
+                required)
+            if (subscr)
+                input(type="submit" class="field__button" value="")
