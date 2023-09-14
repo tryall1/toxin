@@ -21,7 +21,7 @@
     font-family: $font-family-default;
     border:1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
-    color: $dark-25;
+    color: $dark-75;
 
     &-hover {
         border: 1px solid var(--dark-50, rgba(31, 32, 65, 0.50));
@@ -34,6 +34,7 @@
         @include placeholder(var(--dark-75, rgba(31, 32, 65, 0.75)));
     }
 
+    #field__input-masked {
+      color: rgba(31, 32, 65, 0.25);
+    }
 }
-
-

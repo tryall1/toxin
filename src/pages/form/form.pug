@@ -20,7 +20,7 @@ html(lang="en")
                         +field-input({'placeholder': 'Email', 'name':'email', 'hover':false})
                     .field__wrapper
                         +field-heading('Text Field', 'Hover/Focus')
-                        +field-input({'placeholder': 'This is pretty awesome', 'name':'email', 'hover':true})
+                        +field-input({'name':'email', 'hover':true, 'value':'This is pretty awesome', 'masked': false})
                     .field__wrapper
                         +field-heading('Dropdown')
                         select(name='guests').field.dropdown__list
@@ -32,7 +32,7 @@ html(lang="en")
                             button.arrow
                     .field__wrapper
                         +field-heading('Masked text field')
-                        input(type="date", name="date").field.field-masked
+                        +field-input({'name':'email', 'hover':false, 'placeholder':'ДД.ММ.ГГГГ', 'masked': true})
                     .form__date
                         .field__wrapper
                             +field-heading('Date dropdown')

@@ -1,10 +1,19 @@
 mixin field-input(params = {})
     -
         const {
-            placeholder = 'Text',
+            placeholder = '',
             name = 'text',
             type = 'text',
             hover = false,
+            value = '',
+            masked = false,
+            required = true,
         } = params
 
-    input.field__input(placeholder=placeholder, type='text', name=name, class=hover ? 'field__input-hover':'')
+    input.field__input(placeholder=placeholder, 
+        type='text', 
+        name=name, 
+        class=hover ? 'field__input-hover':'',
+        id=masked ? 'field__input-masked': '',
+        value=value
+        required)
