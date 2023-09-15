@@ -4,21 +4,24 @@ mixin field-input(params = {})
             placeholder = '',
             name = 'text',
             type = 'text',
-            hover = false,
+            hover = '',
             value = '',
-            masked = false,
+            masked = '',
             required = true,
-            subscr=false,
+            subscr = false,
+            date_range = '',
+            expander = false,
         } = params
 
-    .field
-        div(class= subscr ? 'field-subscr': '')
-            input.field__input(placeholder=placeholder, 
-                type='text', 
-                name=name, 
-                class= hover ? 'field__input-hover': '',
-                id=masked ? 'field__input-masked': '',
-                value=value
-                required)
-            if (subscr)
-                input(type="submit" class="field__button" value="")
+    div(class='field')
+        input.field__input(placeholder=placeholder, 
+            type='text', 
+            name=name, 
+            class= hover,
+            id = masked + date_range
+            value=value
+            required)
+        if (subscr)
+            input(type="submit" class="field__button" value="")
+        if(expander) 
+            div.expander

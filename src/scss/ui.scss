@@ -33,8 +33,6 @@ $green: var(--secondary-color, #6FCF97);
     }
 }
 
-
-
 @mixin placeholder($color) {
     &::-webkit-input-placeholder {
       color: $color;

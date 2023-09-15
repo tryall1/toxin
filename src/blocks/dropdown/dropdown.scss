@@ -1,0 +1,15 @@
+@import '/src/styles/variables.scss';
+
+.dropdown__input {
+    line-height: 18px;
+    padding: 13px 0 13px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: $font-family-default;
+    border:1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    color: $dark-75;
+    background: url('../../assets/images/expand_more.svg') 95% 50% no-repeat;
+    appearance: none;
+    -webkit-appearance: none;
+}

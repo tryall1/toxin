@@ -1,0 +1,13 @@
+mixin dropdown(params = {})
+    -
+        const {
+            label = '',
+        } = params
+
+    .dropdown
+        select(class="dropdown__input" name="guests")
+            option(value="" disabled="disabled" selected="selected")=label
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
