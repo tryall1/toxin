@@ -39,9 +39,103 @@
     top: 40%;
     right: 5%;
     position: absolute;
-    transition: transform 0.2s;
+    transition: transform 0.1s;
     display: block;
   }
+
+  .datepicker--nav-title {
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.air-datepicker {
+  width: 320px;
+}
+
+.air-datepicker-nav--action svg {
+  width:24px;
+  height: 24px;
+}
+.air-datepicker-nav--action path {
+  fill: #bc9cff;
+  stroke: rgb(188, 156, 255);
+  stroke-width: 1px;
+}
+
+.air-datepicker-nav--title {
+  text-align: center;
+  color: #1f2041;
+  font: 700 1.3571rem/24px Montserrat,arial,sans-serif;
+  padding: 20px 0 30px;
+}
+
+.air-datepicker-nav--title i {
+  color: #1f2041;
+}
+
+.air-datepicker-button span {
+  color: var(--Primary-Color, #BC9CFF);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.air-datepicker-body--day-name {
+  color: var(--Primary-Color, #BC9CFF);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.air-datepicker-cell.-in-range- {
+  background: linear-gradient(180deg,rgba(188,156,255,.25),rgba(139,164,249,.25));
+}
+
+.air-datepicker-cell.-selected-{
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  z-index:4000;
+}
+
+.air-datepicker-cell.-selected-.-range-from-:after {
+  background: linear-gradient(180deg,rgba(188,156,255,.25),rgba(139,164,249,.25));
+  border-radius: 50% 0 0 50%;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.air-datepicker-cell.-selected-.-range-to-:after {
+  background: linear-gradient(180deg,rgba(188,156,255,.25),rgba(139,164,249,.25));
+  border-radius: 0 50% 50% 0;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.air-datepicker-cell.-in-range-:hover {
+  background: linear-gradient(180deg,rgba(188,156,255,.25),rgba(139,164,249,.25));
+  color:#fff;
+}
+
+.datepicker--cell-day {
+  height: 40px;
+  width: 40px;
 }
 
 .field__input {
