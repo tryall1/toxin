@@ -1,17 +1,5 @@
 @import '/src/styles/variables.scss';
 
-@mixin placeholder($color) {
-    &::-webkit-input-placeholder {
-      color: $color;
-    }
-    &::placeholder {
-      color: $color;
-    }
-    &::-ms-input-placeholder {
-      color: $color;
-    }
-}
-
 .field {
   width: 100%;
   position: relative;
@@ -61,6 +49,10 @@
   fill: #bc9cff;
   stroke: rgb(188, 156, 255);
   stroke-width: 1px;
+}
+
+.air-datepicker-nav--action {
+  padding: 15px;
 }
 
 .air-datepicker-nav--title {
@@ -149,13 +141,25 @@
     border-radius: 4px;
     color: $dark-75;
 
+    @mixin placeholder($color) {
+      &::-webkit-input-placeholder {
+        color: $color;
+      }
+      &::placeholder {
+        color: $color;
+      }
+      &::-ms-input-placeholder {
+        color: $color;
+      }
+  }
+
     &-hover {
         border: 1px solid var(--dark-50, rgba(31, 32, 65, 0.50));
         @include placeholder(var(--dark-75, rgba(31, 32, 65, 0.75)));
     }
     
-    &__input:hover,
-    &__input:focus {
+    &:hover,
+    &:focus {
         border: 1px solid var(--dark-50, rgba(31, 32, 65, 0.50));
         @include placeholder(var(--dark-75, rgba(31, 32, 65, 0.75)));
     }
@@ -163,4 +167,6 @@
     #field__input-masked {
       color: rgba(31, 32, 65, 0.25);
     }
+
+
 }

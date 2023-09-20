@@ -35,10 +35,11 @@ html(lang="en")
                     .form__date
                         .field__wrapper
                             +field-heading('Date dropdown')
-                            input(type="date", name="first_date").field.field-masked
+                            //input(type="input", name="first_date", id="start_date").field
+                            +field-input({name: "start_date", masked:"start_date", 'expander':true, 'placeholder': 'ДД.ММ.ГГГГ'})
                         .field__wrapper
                             +field-heading('Date dropdown')
-                            input(type="date", name="second_date" value="2019-08-19").field.field-masked
+                            +field-input({name: "end_date", masked:"end_date", 'expander':true})
                     .field__wrapper-m
                         +field-heading('Filter Date dropdown')
                         +field-input({'name':'datedropdown', 'date_range':'date_range', 'expander':true})
