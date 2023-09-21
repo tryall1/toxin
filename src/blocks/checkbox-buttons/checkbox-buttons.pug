@@ -1,0 +1,12 @@
+mixin checkboxButtons(checkboxes)
+  .checkbox-buttons
+    each checkbox, index in checkboxes
+      .checkbox-buttons__item
+        input.checkbox-buttons__input(
+          type="checkbox",
+          id=`checkbox-${index}`,
+          checked=checkbox.checked
+        )
+        label.checkbox-buttons__label(for=`checkbox-${index}`)
+          .checkbox-buttons__custom-box
+          .checkbox-buttons__text #{checkbox.text}

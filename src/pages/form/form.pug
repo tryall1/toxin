@@ -2,6 +2,7 @@ include ../../blocks/icon/icon
 include ../../blocks/field-heading/field-heading
 include ../../blocks/field-input/field-input
 include ../../blocks/dropdown/dropdown
+include ../../blocks/checkbox-buttons/checkbox-buttons
 
 doctype html
 html(lang="en")
@@ -35,7 +36,6 @@ html(lang="en")
                     .form__date
                         .field__wrapper
                             +field-heading('Date dropdown')
-                            //input(type="input", name="first_date", id="start_date").field
                             +field-input({name: "start_date", masked:"start_date", 'expander':true, 'placeholder': 'ДД.ММ.ГГГГ'})
                         .field__wrapper
                             +field-heading('Date dropdown')
@@ -48,4 +48,10 @@ html(lang="en")
                         +field-heading('Subscription text field')
                         +field-input({'name':'email', 'placeholder':'Email', 'subscr':true})
                 section.checkboxes
+                    +field-heading('Checkbox Buttons')
+                    +checkboxButtons([
+                        { text: 'Можно курить', checked: false },
+                        { text: 'Можно с питомцами', checked: true },
+                        { text: 'Можно пригласить гостей (до 10 человек)', checked: true },
+                    ])
                 section.forms

@@ -1,0 +1,49 @@
+@import '/src/styles/variables.scss';
+
+.checkbox-buttons {
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    &__text {
+        color: var(--dark-50, rgba(31, 32, 65, 0.50));
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 128.571% */
+    }
+  
+    &__input {
+      display: none;
+  
+      &:checked + .checkbox-buttons__label .checkbox-buttons__custom-box {
+        background: url('/src/assets/images/checkbox.svg') no-repeat center center;
+        border:transparent;
+        width:20px;
+        height:21px;
+      }
+    }
+  
+    &__label {
+      cursor: pointer;
+      display: flex;
+    }
+  
+    &__custom-box {
+        width: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        height: 21px;
+        min-height: 21px;
+        max-height: 21px;
+        border: 1px solid var(--dark-25, rgba(31, 32, 65, 0.25));
+        border-radius: 4px;
+        position: relative;
+        margin-right:10px;
+        box-sizing: border-box;
+    }
+  }
+  

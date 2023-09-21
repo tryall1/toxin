@@ -1,4 +1,4 @@
-@import 'reset-css';
+//@import 'reset-css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import '/src/styles/variables.scss';
 
@@ -22,6 +22,10 @@
     grid-template-columns: 360px auto 360px;
     grid-gap: 20%;
     font-family: $font-family-default;
+
+    .checkbox-buttons{
+        width:244px;
+    }
 }
 
 .field__wrapper {
@@ -96,4 +100,3 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--dark-75, rgba(31, 32, 65, 0.75));
     max-width: 266px;
 }
-
