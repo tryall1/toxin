@@ -26,6 +26,10 @@
     .checkbox-buttons{
         width:244px;
     }
+
+    .radio {
+        margin-top:40px;
+    }
 }
 
 .field__wrapper {
@@ -76,11 +80,13 @@
     margin-bottom: 20.5px;
 }
 
+/*
 input[type="date"]::-webkit-calendar-picker-indicator {
     position: relative;
     right: 15px;
     background: url('../../assets/images/expand_more.svg') 70% 50% no-repeat;
 }
+
 
 .dropdown__list {
     appearance: none;
@@ -100,3 +106,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--dark-75, rgba(31, 32, 65, 0.75));
     max-width: 266px;
 }
+*/

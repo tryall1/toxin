@@ -1,0 +1,8 @@
+mixin radioButtons(options, defaultSelected = 0)
+  .radio-buttons
+    each option, index in options
+      .radio-buttons__item
+        input.radio-buttons__input(type="radio", id=`radio-${index}`, name="radio-group", checked=(index === defaultSelected))
+        label.radio-buttons__label(for=`radio-${index}`)
+          .radio-buttons__custom-radio
+          .radio-buttons__text #{option}

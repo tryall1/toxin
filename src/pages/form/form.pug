@@ -3,6 +3,7 @@ include ../../blocks/field-heading/field-heading
 include ../../blocks/field-input/field-input
 include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox-buttons/checkbox-buttons
+include ../../blocks/radio-buttons/radio-button
 
 doctype html
 html(lang="en")
@@ -54,4 +55,9 @@ html(lang="en")
                         { text: 'Можно с питомцами', checked: true },
                         { text: 'Можно пригласить гостей (до 10 человек)', checked: true },
                     ])
+                    .radio
+                        +field-heading('Radio Buttons')
+                        +radioButtons(['Мужчина', 'Женщина'], 0)
+
+
                 section.forms
