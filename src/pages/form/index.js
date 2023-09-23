@@ -4,3 +4,4 @@ import '../../blocks/field-input';
 import '../../blocks/dropdown';
 import '../../blocks/checkbox-buttons';
 import '../../blocks/radio-buttons';
+import '../../blocks/toggle';

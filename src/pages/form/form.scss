@@ -24,7 +24,7 @@
     font-family: $font-family-default;
 
     .checkbox-buttons{
-        width:244px;
+        width:260px;
     }
 
     .radio {
@@ -79,31 +79,3 @@
 .field__wrapper {
     margin-bottom: 20.5px;
 }
-
-/*
-input[type="date"]::-webkit-calendar-picker-indicator {
-    position: relative;
-    right: 15px;
-    background: url('../../assets/images/expand_more.svg') 70% 50% no-repeat;
-}
-
-
-.dropdown__list {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;  
-    background: url('../../assets/images/expand_more.svg') 95% 50% no-repeat;
-    font-family: $font-family-default;
-    color: $dark-75;
-}
-
-.field-masked {
-    text-transform: uppercase;
-}
-
-.date_range {
-    background: url('../../assets/images/expand_more.svg') 95% 50% no-repeat;
-    color: var(--dark-75, rgba(31, 32, 65, 0.75));
-    max-width: 266px;
-}
-*/

@@ -1,0 +1,6 @@
+mixin toggle(name='toogle', defaultSelected=0, id="switch", text)
+    .toggle
+        input.toggle__input(checked=(defaultSelected ? checked:''), id=id, type="checkbox")
+        label(for=id).toggle__label
+            .toggle__custom-radio
+            .toggle__text #{text}

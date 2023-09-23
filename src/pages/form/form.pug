@@ -4,6 +4,7 @@ include ../../blocks/field-input/field-input
 include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/radio-buttons/radio-button
+include ../../blocks/toggle/toggle
 
 doctype html
 html(lang="en")
@@ -48,6 +49,7 @@ html(lang="en")
                     .field__wrapper-m
                         +field-heading('Subscription text field')
                         +field-input({'name':'email', 'placeholder':'Email', 'subscr':true})
+
                 section.checkboxes
                     +field-heading('Checkbox Buttons')
                     +checkboxButtons([
@@ -58,6 +60,10 @@ html(lang="en")
                     .radio
                         +field-heading('Radio Buttons')
                         +radioButtons(['Мужчина', 'Женщина'], 0)
+                    .radio
+                        +field-heading('Toggle')
+                        +toggle('toggle', 0, 'switch', 'Получать спецпредложения')
+                        +toggle('toggle', 1, 'switch-2', 'Получать спецпредложения')
 
 
                 section.forms
