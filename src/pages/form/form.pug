@@ -7,6 +7,7 @@ include ../../blocks/radio-buttons/radio-button
 include ../../blocks/toggle/toggle
 include ../../blocks/like-button/like-button
 include ../../blocks/rating/rating
+include ../../blocks/range-slider/range-slider
 
 doctype html
 html(lang="en")
@@ -76,3 +77,6 @@ html(lang="en")
                         +rating('rating2')
 
                 section.buttons
+                    +field-heading('Range slider',description='5000-10000', slider=true)
+                    div(id='slider')
+

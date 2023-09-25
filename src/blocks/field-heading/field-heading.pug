@@ -1,5 +1,5 @@
-mixin field-heading(title='', description='')
+mixin field-heading(title='', description='', slider=false)
     .field__heading
         label.field__title=title
         if(description)
-            label.field__description #{description}
+            label.field__description(id=(slider ? 'slider_js':'')) #{description}

@@ -7,3 +7,4 @@ import '../../blocks/radio-buttons';
 import '../../blocks/toggle';
 import '../../blocks/like-button';
 import '../../blocks/rating';
+import '../../blocks/range-slider';

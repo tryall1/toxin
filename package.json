@@ -25,6 +25,7 @@
   "dependencies": {
     "air-datepicker": "^3.4.0",
     "imask": "^7.1.3",
+    "nouislider": "^15.7.1",
     "reset-css": "^5.0.2",
     "saas": "^1.0.0"
   }
