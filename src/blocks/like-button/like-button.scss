@@ -1,0 +1,62 @@
+@import '/src/styles/variables.scss';
+
+.like-button {
+    margin: 10px 10px 0 0;
+    display: inline-block;
+
+    &__input {
+        display:none;
+
+        &:checked + .like-button__label {
+            border: 1px solid var(--Primary-Color, #BC9CFF);
+        }
+
+        &:checked + .like-button__label .like-button__text {
+            color: var(--Primary-Color, #BC9CFF);
+        }
+
+        &:checked + .like-button__label .like-button__like svg path {
+            fill:#BC9CFF;
+            background: var(--Primary-Gradient, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%));
+            stroke-width: 0;
+        }
+
+    }
+    
+    &__label {
+        cursor: pointer;
+        display: flex;
+        position: relative;
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        border: 1px solid var(--dark-25, rgba(31, 32, 65, 0.25));
+        align-items: center;
+    }
+
+    &__text {
+        color: var(--dark-25, rgba(31, 32, 65, 0.25));
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 10% 50%;
+    }
+
+    &__like {
+        svg {
+            position: absolute;
+            width:11px;
+            height: 11px;
+            top: 4px;
+            left: 10%;
+            path {
+                fill: none;
+                stroke: var(--dark-25, rgba(31, 32, 65, 0.25));
+                stroke-width: 1;
+            }
+        }
+    }
+}

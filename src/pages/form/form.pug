@@ -5,6 +5,7 @@ include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/radio-buttons/radio-button
 include ../../blocks/toggle/toggle
+include ../../blocks/like-button/like-button
 
 doctype html
 html(lang="en")
@@ -64,6 +65,9 @@ html(lang="en")
                         +field-heading('Toggle')
                         +toggle('toggle', 0, 'switch', 'Получать спецпредложения')
                         +toggle('toggle', 1, 'switch-2', 'Получать спецпредложения')
-
+                    .radio
+                        +field-heading('Like button')
+                        +like-button('like-button-1', 1, 'like', '2')
+                        +like-button('like-button-2', 0, 'like', '12')
 
                 section.forms
