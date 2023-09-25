@@ -6,3 +6,4 @@ import '../../blocks/checkbox-buttons';
 import '../../blocks/radio-buttons';
 import '../../blocks/toggle';
 import '../../blocks/like-button';
+import '../../blocks/rating';

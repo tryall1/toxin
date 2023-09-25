@@ -6,6 +6,7 @@ include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/radio-buttons/radio-button
 include ../../blocks/toggle/toggle
 include ../../blocks/like-button/like-button
+include ../../blocks/rating/rating
 
 doctype html
 html(lang="en")
@@ -69,5 +70,9 @@ html(lang="en")
                         +field-heading('Like button')
                         +like-button('like-button-1', 1, 'like', '2')
                         +like-button('like-button-2', 0, 'like', '12')
+                    .radio
+                        +field-heading('Range button')
+                        +rating('rating', 4)
+                        +rating('rating-2')
 
-                section.forms
+                section.buttons

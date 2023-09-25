@@ -20,7 +20,7 @@
 .ui__wrapper {
     display: grid;
     grid-template-columns: 360px auto 360px;
-    grid-gap: 20%;
+    grid-gap: 7%;
     font-family: $font-family-default;
 
     .checkbox-buttons{
@@ -78,4 +78,9 @@
 
 .field__wrapper {
     margin-bottom: 20.5px;
+}
+
+.buttons {
+    width: 360px;
+    border:1px solid black;
 }

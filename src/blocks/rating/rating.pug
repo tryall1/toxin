@@ -1,0 +1,17 @@
+mixin rating(name, defaultRating = 5)
+  .rating
+    - for (var i = 5; i >= 1; i--)
+      input.rating__input(
+        type='radio', 
+        name=name, 
+        id=`star-${i}`, 
+        value=i,
+        checked=(i === defaultRating) ? true : false
+      )
+      label.rating__label(for=`star-${i}`)
+        svg(width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+          defs
+            linearGradient#star-gradient(x1="0" y1="0" x2="1" y2="0")
+              stop(offset="0%" stop-color="#BC9CFF")
+              stop(offset="100%" stop-color="#8BA4F9")
+          path(d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="none" stroke="url(#star-gradient)" stroke-width="1")

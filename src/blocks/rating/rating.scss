@@ -1,0 +1,24 @@
+.rating {
+    font-size: 0;
+    direction: rtl;
+    display: inline-block;
+    margin:14px 20px 0 0;
+
+    &__input {
+        display: none;  
+        &:checked ~ .rating__label svg path {
+            fill: url(#star-gradient);
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+
+        svg path {
+            stroke-width: 2px;
+        }
+    }
+}
