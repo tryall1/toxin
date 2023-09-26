@@ -1,0 +1,14 @@
+mixin pagination(count=15, active=4)
+    ul.pagination 
+        - for (var i = active-(active>2 ? 1:0); i<=active+2 && i<=count; i++)
+            li.pagination__element 
+                a(href="#", class=(i===active ? 'pagination__link pagination__link-active':'pagination__link'))=i
+
+        if(count!==active && count-active>=3)
+            li.pagination__element
+                a.pagination__link='...'
+            li.pagination__element
+                a.pagination__link(href="#")=count
+            li.pagination__element
+                a.pagination__link.pagination__link-next-button=''
+    .pagination__text="1 – 12 из 100+ вариантов аренды"
