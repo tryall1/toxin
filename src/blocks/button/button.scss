@@ -1,0 +1,92 @@
+@import '/src/styles/variables.scss';
+
+.button {
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    //height: 44px;
+    font-size: 12px;
+    padding: 14px 19px;
+    font-family: $font-family-default;
+    color: #FFF;
+    font-weight: 700;
+    box-sizing: border-box;
+    text-transform: uppercase;
+
+    &--unfilled {
+        position: relative;
+        background-color: white;
+        color: var(--primary-color, #BC9CFF);
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+    }
+
+    &--unfilled::after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 20px;
+        z-index: -1;
+    }
+
+    &--filled {
+        background: var(--primary-gradient, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%));
+        color: #FFF;
+        margin-right: 0px;
+    }
+
+    &--unbordered {
+        padding: 0;
+        border: none;
+        background: none !important;
+        color: var(--Primary-Color, #BC9CFF);
+        opacity: 1 !important;
+        height: 100%;
+
+    }
+
+    &--big {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    &--big::before {
+        content: "";
+        position: absolute;
+        right: 1%;
+        background: url('/src/assets/images/arrow_forward-white.svg') no-repeat center center;
+        width: 44px;
+        height: 44px;
+    }
+
+}
+
+.button--opacity.button--unfilled::after {
+    opacity: 0.5;
+}
+
+.button--opacity.button--filled {
+    opacity: 0.5;
+    background: var(--primary-gradient, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%));
+}
+
+.button--opacity.button--unfilled::after {
+    opacity: 0.5;
+}
+
+.button--opacity.button--filled {
+    opacity: 0.5;
+    background: var(--primary-gradient, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%));
+}
+
+.button--opacity.button--unbordered {
+    color: rgba(31, 32, 65, 0.50);
+}    

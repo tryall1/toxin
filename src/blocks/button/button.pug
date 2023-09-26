@@ -1,0 +1,16 @@
+mixin button(options={})
+    -
+        const {
+            isFilled = false,
+            unBordered = false,
+            isOpacity = false,
+            text = '',
+            isBig = false,
+        } = options;
+
+        const Filled = isFilled ? 'button--filled ' : 'button--unfilled ';
+        const opacity = isOpacity ? 'button--opacity' : '';
+        const border = unBordered ? 'button--unbordered' : '';
+        const big = isBig? 'button--big' : '';
+        
+    button.button(class=[Filled, opacity, border, big])=text

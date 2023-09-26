@@ -8,6 +8,7 @@ include ../../blocks/toggle/toggle
 include ../../blocks/like-button/like-button
 include ../../blocks/rating/rating
 include ../../blocks/range-slider/range-slider
+include ../../blocks/button/button
 
 doctype html
 html(lang="en")
@@ -79,4 +80,17 @@ html(lang="en")
                 section.buttons
                     +field-heading('Range slider',description='5000-10000', slider=true)
                     div(id='slider')
+
+                    .radio
+                        +field-heading('Buttons', slider=false)
+                        .buttons__grid
+                            +button({isFilled:true, text:'Click me'})
+                            +button({isFilled:true, text:'Click me', isOpacity: true})
+                            +button({isFilled:false, text:'Click me', isOpacity: false})
+                            +button({isFilled:false, text:'Click me', isOpacity: true})
+                        
+                        +button({isFilled:true, text:'Click me', isOpacity: false, unBordered: true})
+                        +button({isFilled:true, text:'Click me', isOpacity: true, unBordered: true})
+                        +button({isFilled:true, text:'Перейти к оплате', isBig: true})
+
 

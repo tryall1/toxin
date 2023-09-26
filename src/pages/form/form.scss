@@ -29,7 +29,25 @@
 
     .radio {
         margin-top:40px;
+
+        .button {
+            margin: 19px 19px 0 0;
+        }
+
+        .buttons__grid {
+            width: 218px;
+            margin-top:20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 19px;
+            grid-template-rows: 2;
+
+            .button {
+                margin: 0;
+            }
+        }
     }
+
 }
 
 .field__wrapper {
