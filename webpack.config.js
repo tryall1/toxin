@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const fs = require('fs')
 const devMode = process.env.NODE_ENV === 'development';
 const filename = (ext) => (devMode ? `${ext}/[name].${ext}` : `${ext}/[name].[contenthash].${ext}`);
+var webpack = require('webpack');
 
 const PAGES_DIR = path.resolve(__dirname, 'src/pages')
 const PAGES = fs
@@ -32,6 +33,7 @@ module.exports = {
             '@variables': path.resolve(__dirname, `${PATHS.src}/styles/variables.scss`), //не работает
             
             'blocks': path.resolve(__dirname, '/src/blocks'),
+            'jquery': path.join(__dirname, '/node_modules/jquery/dist/jquery.min.js'),
         },
     },
     performance: {
@@ -65,6 +67,11 @@ module.exports = {
         */
         new MiniCssExtractPlugin({
             filename: filename('css'),
+        }),
+
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
         })
     ],
 
@@ -77,6 +84,7 @@ module.exports = {
                 "css-loader",
                 "sass-loader"
             ]},
+
             {
                 test: /\.(png|svg|jpg|jpeg|gif|svg)$/i,
                 type: 'asset/resource',

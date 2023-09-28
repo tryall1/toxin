@@ -50,10 +50,11 @@
         .field__heading{
             margin-bottom:15px;
         }
-
-
     }
+}
 
+.ui__wrapper:nth-child(2) {
+    margin-top:80px;
 }
 
 .field__wrapper {
@@ -106,5 +107,4 @@
 
 .buttons {
     width: 360px;
-    border:1px solid black;
 }

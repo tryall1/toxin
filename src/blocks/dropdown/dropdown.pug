@@ -1,13 +1,40 @@
-mixin dropdown(params = {})
+mixin dropdown(params = {}, items=[])
     -
         const {
             label = '',
+            id='',
+            open=false
         } = params
 
-    .dropdown
+    .iqdropdown(id=id, class=(open ? 'menu-open':''))
+        p.iqdropdown-selection(data-selection-text=" гость " data-text-plural="гостя")
+        .iqdropdown-menu
+            each item in items
+                    .iqdropdown-menu-option(
+                        data-id=item['data-id'] 
+                        data-selection-text=item['data-selection-text'] 
+                        data-defaultcount=item['data-defaultcount']
+                    )
+                        div
+                            p.iqdropdown-item=item['data-selection-text']
+
+        //.iqdropdown-menu
+            .iqdropdown-menu-option(data-id='bedrooms' data-seletion-text='Спальни' data-defaultcount='2')
+                div
+                    p.iqdropdown-item='Спальни'
+            .iqdropdown-menu-option(data-id='beds' data-defaultcount='2' data-seletion-text='Кровати')
+                div
+                    p.iqdropdown-item='Кровати'
+            .iqdropdown-menu-option(data-id='bathroom')
+                div
+                    p.iqdropdown-item='Ванные комнаты'
+
+    
+    //.dropdown
         select(class="dropdown__input" name="guests")
             option(value="" disabled="disabled" selected="selected")=label
                 option(value="1") 1
                 option(value="2") 2
                 option(value="3") 3
                 option(value="4") 4
+        
