@@ -3,7 +3,8 @@ mixin dropdown(params = {}, items=[])
         const {
             label = '',
             id='',
-            open=false
+            open=false,
+            buttons=false,
         } = params
 
     .iqdropdown(id=id, class=(open ? 'menu-open':''))
@@ -11,12 +12,16 @@ mixin dropdown(params = {}, items=[])
         .iqdropdown-menu
             each item in items
                     .iqdropdown-menu-option(
-                        data-id=item['data-id'] 
-                        data-selection-text=item['data-selection-text'] 
+                        data-id=item['data-id']
+                        data-selection-text=item['data-selection-text']
                         data-defaultcount=item['data-defaultcount']
                     )
                         div
                             p.iqdropdown-item=item['data-selection-text']
+            if(buttons)
+                .iqdropdown-menu__buttons
+                    .iqdropdown-menu__clear='Очистить'
+                    .iqdropdown-menu__save='Применить'
 
         //.iqdropdown-menu
             .iqdropdown-menu-option(data-id='bedrooms' data-seletion-text='Спальни' data-defaultcount='2')
