@@ -9,7 +9,7 @@
 
     &__text {
         color: var(--dark-50, rgba(31, 32, 65, 0.50));
-        font-family: Montserrat;
+        font-family: $font-family-default;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -45,5 +45,35 @@
         margin-right:10px;
         box-sizing: border-box;
     }
+
+    &.field__heading {
+      margin-bottom: 18px;
+    }
   }
-  
+
+  .expandable-buttons {
+    position: relative;
+  }
+
+  .expandable-buttons .field__heading::after {
+    position: absolute;
+    content:"";
+    right: -5%;
+    top:2%;
+    background: url(../../assets/images/expand_more.svg) no-repeat;
+    height: 8px;
+    width: 12px;
+  }
+
+  .expandable-buttons .checkbox-buttons__list {
+    display:none;
+  }
+
+  .expandable-buttons.expandable-buttons--open .checkbox-buttons__list{
+    transition: all .2s ease-in-out;
+    display:block;
+  }
+
+  .expandable-buttons.expandable-buttons--open .field__heading::after {
+    transform: rotate(180deg);
+  }

@@ -113,11 +113,31 @@ html(lang="en")
                         ])
 
                         +field-heading('Dropdown', 'expanded')
-                        +dropdown({id:'dropdown-open',open:true}, [
+                        +dropdown({id:'dropdown-open',open:false}, [
                         {'data-id':'bedrooms','data-selection-text':'Спальни', 'data-defaultcount':'2'},
                         {'data-id':'beds','data-selection-text':'Кровати', 'data-defaultcount':'2'},
                         {'data-id':'bathroom','data-selection-text':'Ванные'}
                         ])
+
+                        .radio
+                            +checkboxButtons([
+                            { text: 'Завтрак', checked: false },
+                            { text: 'Письменный стол', checked: true },
+                            { text: 'Стул для кормления', checked: true },
+                            { text: 'Кроватка', checked: true },
+                            { text: 'Телевизор', checked: false },
+                            { text: 'Шампунь', checked: false },
+                            ], expandable=true, heading_text='Expandable checkbox list')
+
+                        .radio
+                            +checkboxButtons([
+                            { text: 'Завтрак', checked: false },
+                            { text: 'Письменный стол', checked: true },
+                            { text: 'Стул для кормления', checked: true },
+                            { text: 'Кроватка', checked: true },
+                            { text: 'Телевизор', checked: false },
+                            { text: 'Шампунь', checked: false },
+                            ], expandable=true, heading_text='Expandable checkbox list')
 
                 section.fields
                     .field__wrapper

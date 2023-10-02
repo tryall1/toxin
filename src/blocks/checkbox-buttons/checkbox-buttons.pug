@@ -1,12 +1,18 @@
-mixin checkboxButtons(checkboxes)
-  .checkbox-buttons
-    each checkbox, index in checkboxes
-      .checkbox-buttons__item
-        input.checkbox-buttons__input(
-          type="checkbox",
-          id=`checkbox-${index}`,
-          checked=checkbox.checked
-        )
-        label.checkbox-buttons__label(for=`checkbox-${index}`)
-          .checkbox-buttons__custom-box
-          .checkbox-buttons__text #{checkbox.text}
+include ../field-heading/field-heading
+
+mixin checkboxButtons(checkboxes, expandable=false, heading_text='')
+  .checkbox-buttons(class=expandable ? 'expandable-buttons':'')
+    +field-heading(heading_text)
+    .checkbox-buttons__list
+      each checkbox, index in checkboxes
+        .checkbox-buttons__item
+          input.checkbox-buttons__input(
+            type="checkbox",
+            id=`checkbox-${index}`,
+            checked=checkbox.checked
+          )
+          label.checkbox-buttons__label(for=`checkbox-${index}`)
+            .checkbox-buttons__custom-box
+            if(checkbox.heading)
+              .checkbox-buttons__heading #{checkbox.heading}
+            .checkbox-buttons__text #{checkbox.text}
