@@ -10,6 +10,7 @@ include ../../blocks/rating/rating
 include ../../blocks/range-slider/range-slider
 include ../../blocks/button/button
 include ../../blocks/pagination/pagination
+include ../../blocks/bullet/bullet
 
 doctype html
 html(lang="en")
@@ -167,3 +168,9 @@ html(lang="en")
                             { text: 'Ширина коридоров в номере не менее 91 см.', checked: false, heading: 'Широкий коридор'},
                             { text: 'На 1 этаже вас встретит специалист  и проводит до номера.', checked: false, heading: 'Помощник для инвалидов' }],
                             expandable=false, heading_text='rich checkbox buttons')
+
+                section.fields
+                    .field__wrapper
+                        .radio
+                            +field-heading('bullet list')
+                            +bullet(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])

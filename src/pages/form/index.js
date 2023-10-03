@@ -10,6 +10,7 @@ import '../../blocks/rating';
 import '../../blocks/range-slider';
 import '../../blocks/button';
 import '../../blocks/pagination';
+import '../../blocks/bullet';
 
 var options = {
     // optionally can use setSelectionText function to override selectionText

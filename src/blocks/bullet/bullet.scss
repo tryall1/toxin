@@ -1,0 +1,24 @@
+@import '/src/styles/variables.scss';
+
+.bullet {
+    max-width: 270px;
+
+    &__item {
+        list-style-type: none;
+        color: var(--dark-75, rgba(31, 32, 65, 0.75));
+        font-family: $font-family-default;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+    }
+
+    &__item::before {
+        content: "\0020";
+        background: url('../../assets/images/bullet.svg') no-repeat center;
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 10.5px; /* Also needed for space (tweak if needed) */
+        height: 10px;
+        margin-right: 11px;
+      }
+}
