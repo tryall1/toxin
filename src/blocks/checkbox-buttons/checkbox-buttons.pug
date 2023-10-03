@@ -1,18 +1,22 @@
 include ../field-heading/field-heading
 
+- function randomId() { return Math.random().toString(36).substr(2, 9); }
+
 mixin checkboxButtons(checkboxes, expandable=false, heading_text='')
   .checkbox-buttons(class=expandable ? 'expandable-buttons':'')
     +field-heading(heading_text)
     .checkbox-buttons__list
-      each checkbox, index in checkboxes
+      each checkbox in checkboxes
+        - var id = randomId();
         .checkbox-buttons__item
           input.checkbox-buttons__input(
             type="checkbox",
-            id=`checkbox-${index}`,
+            id=id,
             checked=checkbox.checked
           )
-          label.checkbox-buttons__label(for=`checkbox-${index}`)
+          label.checkbox-buttons__label(for=id)
             .checkbox-buttons__custom-box
             if(checkbox.heading)
               .checkbox-buttons__heading #{checkbox.heading}
+              div
             .checkbox-buttons__text #{checkbox.text}

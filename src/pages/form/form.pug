@@ -119,26 +119,6 @@ html(lang="en")
                         {'data-id':'bathroom','data-selection-text':'Ванные'}
                         ])
 
-                        .radio
-                            +checkboxButtons([
-                            { text: 'Завтрак', checked: false },
-                            { text: 'Письменный стол', checked: true },
-                            { text: 'Стул для кормления', checked: true },
-                            { text: 'Кроватка', checked: true },
-                            { text: 'Телевизор', checked: false },
-                            { text: 'Шампунь', checked: false },
-                            ], expandable=true, heading_text='Expandable checkbox list')
-
-                        .radio
-                            +checkboxButtons([
-                            { text: 'Завтрак', checked: false },
-                            { text: 'Письменный стол', checked: true },
-                            { text: 'Стул для кормления', checked: true },
-                            { text: 'Кроватка', checked: true },
-                            { text: 'Телевизор', checked: false },
-                            { text: 'Шампунь', checked: false },
-                            ], expandable=true, heading_text='Expandable checkbox list')
-
                 section.fields
                     .field__wrapper
                         +field-heading('Dropdown')
@@ -147,6 +127,7 @@ html(lang="en")
                         {'data-id':'young','data-selection-text':'Дети', 'data-defaultcount':'0'},
                         {'data-id':'too_young','data-selection-text':'Мланеднцы', 'data-defaultcount':'0'}
                         ])
+
                 section.fields
                     .field__wrapper
                         +field-heading('Dropdown')
@@ -155,3 +136,34 @@ html(lang="en")
                         {'data-id':'young','data-selection-text':'Дети', 'data-defaultcount':'1'},
                         {'data-id':'too_young','data-selection-text':'Мланеднцы'}
                         ])
+
+            div.ui__wrapper
+                section.fields
+                    .field__wrapper
+                        .radio
+                            +checkboxButtons([
+                            { text: 'Завтрак', checked: false },
+                            { text: 'Письменный стол', checked: true },
+                            { text: 'Стул для кормления', checked: true },
+                            { text: 'Кроватка', checked: true },
+                            { text: 'Телевизор', checked: false },
+                            { text: 'Шампунь', checked: false },
+                            ], expandable=true, heading_text='Expandable checkbox list')
+
+                        .radio
+                            +checkboxButtons([
+                            { text: 'Завтрак', checked: false },
+                            { text: 'Письменный стол', checked: true },
+                            { text: 'Стул для кормления', checked: true },
+                            { text: 'Кроватка', checked: true },
+                            { text: 'Телевизор', checked: false },
+                            { text: 'Шампунь', checked: false },
+                            ], expandable=true, heading_text='Expandable checkbox list')
+                            
+                section.fields
+                    .field__wrapper
+                        .radio
+                            +checkboxButtons([
+                            { text: 'Ширина коридоров в номере не менее 91 см.', checked: false, heading: 'Широкий коридор'},
+                            { text: 'На 1 этаже вас встретит специалист  и проводит до номера.', checked: false, heading: 'Помощник для инвалидов' }],
+                            expandable=false, heading_text='rich checkbox buttons')
