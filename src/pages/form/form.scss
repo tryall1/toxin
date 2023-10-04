@@ -61,6 +61,12 @@
     }
 }
 
+.ui__wrapper--footer {
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2;
+}
+
 .ui__wrapper:nth-child(2) {
     margin-top:80px;
 }

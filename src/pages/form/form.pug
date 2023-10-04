@@ -11,6 +11,7 @@ include ../../blocks/range-slider/range-slider
 include ../../blocks/button/button
 include ../../blocks/pagination/pagination
 include ../../blocks/bullet/bullet
+include ../../blocks/pros/pros
 
 doctype html
 html(lang="en")
@@ -174,3 +175,25 @@ html(lang="en")
                         .radio
                             +field-heading('bullet list')
                             +bullet(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+                
+            div.ui__wrapper--footer
+                section.fields
+                    .field__wrapper
+                        .radio
+                            +pros([
+                            {
+                                image: '/images/comfort.svg',
+                                title: 'Комфорт',
+                                description: 'Шумоподавляющие стены',
+                                separator: true,
+                            },
+                            {
+                                image: '/images/location_city.svg',
+                                title: 'Удобство',
+                                description: 'Окно в каждой из спален',
+                                separator: true,
+                            }
+                            ])
+
+                section.fields
+                    .field__wrapper

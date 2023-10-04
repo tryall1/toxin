@@ -1,0 +1,9 @@
+mixin pros(prosList)
+  each pro in prosList
+    .pros-item
+        img.pros-item__image(src=pro.image, alt=pro.title)
+        .pros-item__content
+            .pros-item__title= pro.title
+            p.pros-item__description= pro.description
+    if pro.separator
+        hr.pros-item__separator
