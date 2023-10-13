@@ -2,10 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import '/src/styles/variables.scss';
 
+body {
+    background: $dark-5;
+}
 
 .container {
     max-width: 1160px;
     margin: 0 auto;
+    padding-bottom: 130px;
 }
 
 .form__header {
