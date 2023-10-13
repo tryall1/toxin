@@ -12,6 +12,7 @@ import '../../blocks/button';
 import '../../blocks/pagination';
 import '../../blocks/bullet';
 import '../../blocks/pros';
+import '../../blocks/review';
 
 var options = {
     // optionally can use setSelectionText function to override selectionText

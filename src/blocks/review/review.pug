@@ -1,0 +1,21 @@
+include ../like-button/like-button
+
+mixin review(params)
+    -
+        const {
+            photo = '',
+            name = '',
+            date = '',
+            likes = 0,
+            text = 'Отзыв отсутствует.',
+        } = params
+
+    .review
+        .review__avatar-container
+            img.review__avatar(src=photo, alt=name + "'s avatar")
+            +like-button('like-button-3', 0, 'like', likes)
+        .review__content
+            .review__header
+                .review__author=name
+                .review__date=date
+            .review__text=text

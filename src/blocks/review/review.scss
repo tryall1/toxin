@@ -1,0 +1,57 @@
+@import '/src/styles/variables.scss';
+
+.review {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px; // отступ между колонками
+  
+    &__avatar-container {
+      position: relative;
+      align-self: start; // чтобы аватар был прижат к верхнему краю
+      display:flex;
+      flex-direction: column;
+    }
+  
+    &__avatar {
+      border-radius: 50%; // для круглой аватарки
+      width: 47px;
+      height: 47px;
+      border: 2px solid rgba(253, 253, 253);
+    }
+  
+    &__content {
+  
+      .review__header {
+        display: flex;
+        margin-bottom: 10px;
+        flex-direction: column;
+      }
+  
+      .review__author {
+        font-weight: bold;
+        color: var(--dark-75, rgba(31, 32, 65, 0.75));
+        font-family: $font-family-default, sans-serif;
+
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 171.429% */
+      }
+  
+      .review__date {
+        color: #aaa;
+        font-family: $font-family-default, sans-serif;
+        font-weight: 400;
+      }
+  
+      .review__text {
+        color: var(--dark-75, rgba(31, 32, 65, 0.75));
+        font-family: $font-family-default;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+  }
+  
