@@ -1,0 +1,114 @@
+@import '/src/styles/variables.scss';
+
+$default-color: var(--dark-100, #1F2041);
+$default-font: $font-family-default;
+
+%text-defaults {
+    font-family: $default-font;
+    font-style: normal;
+    line-height: normal;
+    color: $default-color;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    border: 0;
+    background: transparent;
+    overflow: visible;
+    color: inherit;
+    font-family: inherit;
+    text-align: inherit;
+    vertical-align: baseline;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-bottom: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__header {
+    width: 100%;
+    height: 143px;
+}
+
+.ui__logo {
+    padding: 30px 0 0 30px;
+}
+
+.color {
+    margin-bottom: 20px;
+    display: flex;
+
+    &__name, &__attribute {
+        @extend %text-defaults;
+        font-size: 19px;
+    }
+
+    &__name {
+        font-weight: 700;
+    }
+
+    &__attributes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__pallete {
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+        margin-right: 40px;
+    }
+
+    &__pallete--dark-100 { background: var(--dark-100, #1F2041); }
+    &__pallete--dark-75 { background: var(--dark-75, rgba(31, 32, 65, 0.75)); }
+    &__pallete--dark-50 { background: var(--dark-50, rgba(31, 32, 65, 0.50)); }
+    &__pallete--dark-25 { background: var(--dark-25, rgba(31, 32, 65, 0.25)); }
+    &__pallete--dark-5  { background: rgba(31, 32, 65, 0.05); }
+    &__pallete--purple  { background: var(--Primary-Color, #BC9CFF); }
+    &__pallete--green   { background: var(--Secondary-Color, #6FCF97); }
+}
+
+.texts {
+    font-family: $default-font;
+
+    &__label, .h1, .h2, .h3 {
+        @extend %text-defaults;
+    }
+
+    &__label {
+        color: var(--dark-25, rgba(31, 32, 65, 0.25));
+        text-align: right;
+        font-weight: 400;
+        margin-right: 30px;
+        width: 30px;
+    }
+
+    &__label-h1 { font-size: 24px; }
+    &__label-h2 { font-size: 19px; }
+    &__label-h3 { font-size: 12px; }
+
+    &__line {
+        display: flex;
+        width: 400px;
+        margin-bottom: 50px;
+    }
+
+    .h1 { font-size: 24px; font-weight: 700; }
+    .h2 { font-size: 19px; font-weight: 700; }
+    .h3 { 
+        font-size: 12px; 
+        font-weight: 700; 
+        text-transform: uppercase;
+    }
+}

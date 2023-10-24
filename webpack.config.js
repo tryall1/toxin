@@ -26,7 +26,7 @@ module.exports = {
     output: {
         filename: filename('js'),
         path: PATHS.dist,
-        clean: true,
+        clean: false,
     },
     resolve: {
         alias: {
@@ -91,6 +91,7 @@ module.exports = {
                 generator: {
                     filename: './images/[name][ext]',
                 },
+
             },
             {
                 test: /\.pug$/,
