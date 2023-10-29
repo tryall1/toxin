@@ -1,13 +1,13 @@
+
 import IMask from 'imask'
 import AirDatepicker from 'air-datepicker'
+import "air-datepicker/air-datepicker.css"
 
-// Date validation
-const element = document.getElementById('field__input-masked');
+//Data mask
 const maskOptions = {
   mask: Date,
   min: new Date(2022, 9, 13),
 };
-const mask = IMask(element, maskOptions);
 
 const first_date = document.getElementById('start_date');
 new IMask(first_date, maskOptions);
@@ -16,8 +16,10 @@ const end_date = document.getElementById('end_date');
 new IMask(end_date, maskOptions);
 
 
-let button = {
-  className: 'custom-button-calendar', //no styles in scss
+//Datepicker for date range and two inputs
+
+var button = {
+  className: 'custom-button-calendar', 
   content: 'Применить',
 }
 
@@ -72,13 +74,12 @@ let endDatepicker = new AirDatepicker('#end_date', {
   range: true, 
   selectedDates: ['2023-08-19'],
   autoClose: true,
+  buttons: ['clear', button],
   onSelect({date}) {
     if(date.length===2) {
       endDatepicker.selectDate(endDatepicker.selectedDates[1]); //selecting only one(last) date in input
     }
   }
 });
-
-import "air-datepicker/air-datepicker.css"
 
 import './field-input.scss';

@@ -1,0 +1,27 @@
+@import '/src/styles/variables.scss';
+.room-search {
+    background-color:#fff;
+    padding: 40px 30px;
+
+    .room-search__header.h2 {
+        color: var(--dark-100, #1F2041);
+        font-family: $font-family-default;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 21px;
+    }
+
+    .form__date {
+        display: flex;
+        
+        .field__wrapper:first-child {
+            margin-right: 20px;
+        }
+    
+        .field {
+            color: var(--dark-75, rgba(31, 32, 65, 0.75));
+        }
+    }
+}

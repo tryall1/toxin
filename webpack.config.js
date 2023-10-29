@@ -26,7 +26,7 @@ module.exports = {
     output: {
         filename: filename('js'),
         path: PATHS.dist,
-        clean: false,
+        clean: true,
     },
     resolve: {
         alias: {
