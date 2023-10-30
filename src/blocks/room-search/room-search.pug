@@ -1,6 +1,7 @@
 include ../field-heading/field-heading
 include ../field-input/field-input
 include ../dropdown/dropdown
+include ../button/button
 
 mixin room-search(options) 
     -
@@ -28,3 +29,4 @@ mixin room-search(options)
             {'data-id':'young','data-selection-text':'Дети', 'data-defaultcount':'0'},
             {'data-id':'too_young','data-selection-text':'Мланеднцы', 'data-defaultcount':'0'}
         ])
+        +button({isFilled:true, text:'Подобрать номер', isBig: true})

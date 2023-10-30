@@ -8,12 +8,13 @@
 
     .field__title {
         color:$dark-100;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 700;
+        font-family: $font-family-default;
     }
     
     .field__description {
-        font-size: 14px;
+        font-size: 12px;
         color: $dark-50;
         font-weight: 400;
     }

@@ -21,7 +21,6 @@ $(document).ready(function() {
             }
         }
     }
-    
+
     $('#dropdown-guest-empty').iqDropdown(options_guest);
-    //$('#dropdown').addClass('menu-open');
 });
