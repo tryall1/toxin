@@ -8,7 +8,7 @@
     background: #FFF;
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
 
-    .room-search__header.h2 {
+    h2.room-search__header {
         color: var(--dark-100, #1F2041);
         font-family: $font-family-default;
         font-size: 24px;
@@ -30,7 +30,6 @@
     }
 
     .field__heading {
-        margin-top:21px;
         font-family: $font-family-default;
     }
 

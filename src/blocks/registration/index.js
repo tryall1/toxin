@@ -1,0 +1,6 @@
+import './registration.scss'
+import '../field-heading/field-heading.scss'
+import '../field-input/field-input.scss'
+import '../button/button.scss'
+import '../toggle/toggle.scss'
+import '../radio-buttons/radio-buttons.scss'

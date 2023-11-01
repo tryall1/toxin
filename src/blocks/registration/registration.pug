@@ -1,0 +1,24 @@
+include ../field-heading/field-heading
+include ../field-input/field-input
+include ../dropdown/dropdown
+include ../button/button
+include ../toggle/toggle
+include ../radio-buttons/radio-button
+
+mixin registration(title='')
+    .registration 
+        h2.registration__header=title
+        form(action="/submit", method="post").form__date
+            +field-input({'placeholder': 'Имя', 'name':'name', 'hover':false, 'date_range': false})
+            +field-input({'placeholder': 'Фамилия', 'name':'last_name', 'hover':false, 'date_range': false})
+            +radioButtons(['Мужчина', 'Женщина'], 0)
+            +field-heading('Дата рождения')
+            +field-input({name: "birthday", masked:"birthday", 'expander':false, 'placeholder': 'ДД.ММ.ГГГГ'})
+            +field-heading('Данные для входа в сервис')
+            +field-input({'placeholder': 'Email', 'name':'email', 'hover':false, 'date_range': false})
+            +field-input({'placeholder': 'Пароль', 'name':'password', 'hover':false, 'date_range': false})
+            +toggle('toggle', 1, 'switch-2', 'Получать спецпредложения')
+            +button({isFilled:true, text:'Подобрать номер', isBig: true})
+        .registration__bottom-line 
+            span='Уже есть аккаунт на Toxin'
+            +button({isFilled:false, text:'Войти', isOpacity: false})

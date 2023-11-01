@@ -1,5 +1,6 @@
 include ../../blocks/icon/icon
 include ../../blocks/room-search/room-search
+include ../../blocks/registration/registration
 
 doctype html
 html(lang="en")
@@ -17,6 +18,8 @@ html(lang="en")
                     header:'Найдём номера под ваши пожелания',
                     button_text : 'Подобрать номер',
                 })
+
+                +registration('Регистрация аккаунта')
             .column 
 
             .column 

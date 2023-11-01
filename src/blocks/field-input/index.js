@@ -15,9 +15,13 @@ new IMask(first_date, maskOptions);
 const end_date = document.getElementById('end_date');
 new IMask(end_date, maskOptions);
 
+const birthday = document.getElementById('birthday');
+new IMask(birthday, 
+  {
+    mask: Date,
+  });
 
 //Datepicker for date range and two inputs
-
 var button = {
   className: 'custom-button-calendar', 
   content: 'Применить',

@@ -14,7 +14,7 @@ mixin room-search(options)
         } = options;
     
     .room-search
-        .room-search__header.h2=header
+        h2.room-search__header=header
         form(action="/submit", method="post").form__date
             .field__wrapper
                 +field-heading('Прибытие')
@@ -29,4 +29,4 @@ mixin room-search(options)
             {'data-id':'young','data-selection-text':'Дети', 'data-defaultcount':'0'},
             {'data-id':'too_young','data-selection-text':'Мланеднцы', 'data-defaultcount':'0'}
         ])
-        +button({isFilled:true, text:'Подобрать номер', isBig: true})
+        +button({isFilled:true, text:'Перейти к оплате', isBig: true})
