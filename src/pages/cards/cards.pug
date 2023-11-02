@@ -1,6 +1,7 @@
 include ../../blocks/icon/icon
 include ../../blocks/room-search/room-search
 include ../../blocks/registration/registration
+include ../../blocks/room-info/room-info
 
 doctype html
 html(lang="en")
@@ -18,8 +19,14 @@ html(lang="en")
                     header:'Найдём номера под ваши пожелания',
                     button_text : 'Подобрать номер',
                 })
-
                 +registration('Регистрация аккаунта')
             .column 
-
+                +room-info({
+                    room_name:'888',
+                    isLuxury:true,
+                    cost:'9900',
+                    arriving:'19.08.2019',
+                    departure:'23.08.2019',
+                    guests:3,
+                })
             .column 

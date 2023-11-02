@@ -1,0 +1,59 @@
+include ../field-heading/field-heading
+include ../field-input/field-input
+include ../dropdown/dropdown
+include ../button/button
+
+mixin room-info(options)
+    -
+        const {
+            room_name='',
+            isLuxury=false,
+            cost='нет цены',
+            arriving='',
+            departure='',
+            guests=0,
+        }=options
+    
+    .room-info 
+        .room-info__header-line
+            .room-info__wrapper 
+                .room-info__number='№'
+                .room-info__name=room_name
+                span.room-info__luxury=isLuxury ? 'Люкс':''
+            .room-info__wrapper 
+                .room-info__cost=cost+'₽ '
+                .room-info__sum=' в сутки'
+
+        .form_date
+            .field__wrapper
+                +field-heading('Прибытие')
+                +field-input({name: "start_date", masked:"start_date2", 'expander':true, 'placeholder': arriving})
+            .field__wrapper
+                +field-heading('Выезд')
+                +field-input({name: "end_date", masked:"end_date2", 'expander':true, 'placeholder': departure})
+        
+        +field-heading('Гости')
+        +dropdown({id:'dropdown-guest',open:false}, [
+            {'data-id':'old','data-selection-text':'Взрослые', 'data-defaultcount':guests},                
+            {'data-id':'young','data-selection-text':'Дети', 'data-defaultcount':'0'},
+            {'data-id':'too_young','data-selection-text':'Мланеднцы', 'data-defaultcount':'0'}
+        ])
+
+        .room-info__line
+            .room-info__line-left=cost+' ₽ х 4 суток'
+            .room-info__line-right='39 960₽'
+
+        .room-info__line
+            .room-info__line-left.info='Сбор за услуги: скидка'
+            .room-info__line-right='0₽'
+
+        .room-info__line
+            .room-info__line-left.info='Сбор за дополнительные услуги'
+            .room-info__line-right='300₽'
+        
+        .room-info__summury 
+            .room-info__text='Итого'
+            .room-info__line-bottom
+            .room-info__full-price='38 081₽'
+        
+        +button({isFilled:true, text:'Забронировать', isBig: true})

@@ -1,0 +1,111 @@
+@import '/src/styles/variables.scss';
+
+.room-info {
+    background-color:#fff;
+    padding: 40px 30px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #FFF;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
+    position: relative;
+    z-index: 1;
+
+    &__header-line {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom: 19px;
+    }
+
+    &__line {
+        display:flex;
+        justify-content: space-between;
+        color: var(--dark-75, rgba(31, 32, 65, 0.75));
+        font-family: $font-family-default;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+        margin-top: 10px;
+    }
+
+    &__wrapper > * {
+        display: inline-block;
+    }
+
+    &__number {
+        font-family: $font-family-default;
+        font-size: 14px;
+        font-weight: 700;
+        margin-right: 3px;
+    }
+
+    &__name {
+        font-size: 24px;
+        font-weight: 700;
+        margin-right: 8px;
+    }
+
+    &__luxury {
+        color: var(--Primary-Color, #BC9CFF);
+        font-family: $font-family-default;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__cost {
+        color: rgba(31, 32, 65, 0.50);
+        font-family: $font-family-default;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px; /* 128.571% */
+    }
+
+    &__sum {
+        color: rgba(31, 32, 65, 0.50);
+        font-family: $font-family-default;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    &__summury {
+        color: var(--dark-100, #1F2041);
+        font-family: $font-family-default;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: flex;
+        white-space: nowrap;
+        align-items: end;
+    }
+
+    &__summury > * {
+        display: inline-block;
+    }
+
+    &__line-bottom {
+        border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+        flex-grow: 1;
+        margin-top: 30px;
+
+    }
+
+    .button {
+        margin-top:25px;
+    }
+}
+
+.form_date {
+    display: flex;
+    
+    .field__wrapper:first-child {
+        margin-right: 20px;
+    }
+
+    .field {
+        color: var(--dark-75, rgba(31, 32, 65, 0.75));
+    }
+}
