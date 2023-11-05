@@ -3,25 +3,6 @@ import IMask from 'imask'
 import AirDatepicker from 'air-datepicker'
 import "air-datepicker/air-datepicker.css"
 
-//Data mask
-const maskOptions = {
-  mask: Date,
-  min: new Date(2022, 9, 13),
-};
-
-const first_date = document.getElementById('start_date');
-new IMask(first_date, maskOptions);
-
-const end_date = document.getElementById('end_date');
-new IMask(end_date, maskOptions);
-
-const birthday = document.getElementById('birthday');
-
-new IMask(birthday, 
-  {
-    mask: Date,
-  });
-
 //Datepicker for date range and two inputs
 var button = {
   className: 'custom-button-calendar', 
