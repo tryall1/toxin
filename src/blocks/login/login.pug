@@ -1,0 +1,15 @@
+
+include ../field-input/field-input
+include ../dropdown/dropdown
+include ../button/button
+
+mixin login() 
+    .login 
+        h2.login__header='Войти'
+        form(action="/submit", method="post").login__form
+            +field-input({'placeholder': 'Email', 'name':'email', 'date_range': false})
+            +field-input({'placeholder': 'Пароль', 'name':'password', 'date_range': false})
+            +button({isFilled:true, text:'Войти', isBig: true})
+        .login__bottom-line 
+            span='Нет аккаунта на Toxin?'
+            +button({isFilled:false, text:'Создать', isOpacity: false})

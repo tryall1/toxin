@@ -40,8 +40,10 @@ mixin room-info(options)
         ])
 
         .room-info__line
-            .room-info__line-left=cost+' ₽ х 4 суток'
-            .room-info__line-right='39 960₽'
+            .room-info__line-left=cost+' ₽ х '
+                .room-info__line-left-days='4'
+            .room-info__line-right='39 960'
+                .room-info__line-right-sum=' ₽'
 
         .room-info__line
             .room-info__line-left.info='Сбор за услуги: скидка'
