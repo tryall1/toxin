@@ -39,6 +39,7 @@
 
 .air-datepicker {
   width: 320px;
+  --adp-day-cell-height:40px;
 }
 
 .air-datepicker-nav--action svg {
@@ -57,10 +58,29 @@
 }
 
 .air-datepicker-nav--title {
+  color: var(--dark-100, #1F2041);
   text-align: center;
-  color: #1f2041;
-  font: 700 1.3571rem/24px Montserrat,arial,sans-serif;
-  padding: 20px 0 30px;
+  font-family: $font-family-default;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.air-datepicker-cell.-focus- {
+  background: var(--Secondary-Gradient, linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%));
+  border-radius: 50%;
+  color: #fff;
+}
+
+.air-datepicker-cell.-current- {
+  background: var(--Secondary-Gradient, linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%));
+  border-radius: 50%;
+  color: #fff;
+}
+
+.air-datepicker--content {
+  padding: 4px 20px 4px 20px;
 }
 
 .air-datepicker-nav--title i {
@@ -84,6 +104,16 @@
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
+  line-height: normal;
+}
+
+.air-datepicker-cell {
+  color: var(--dark-50, rgba(31, 32, 65, 0.50));
+  text-align: center;
+  font-family: $font-family-default;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
   line-height: normal;
 }
 
