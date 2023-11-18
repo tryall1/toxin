@@ -4,6 +4,7 @@ include ../../blocks/registration/registration
 include ../../blocks/room-info/room-info
 include ../../blocks/login/login
 include ../../blocks/date-range/date-range
+include ../../blocks/room-card/room-card
 
 doctype html
 html(lang="en")
@@ -34,3 +35,13 @@ html(lang="en")
                 +login()
             .column 
                 +date-range()
+                +room-card({
+                    room_name:'888',
+                    room_price:'9 999',
+                    reviews_count:5,
+                    images:{
+                    },
+                    isLuxury:1
+                })
+
+                

@@ -1,0 +1,95 @@
+@import '/src/styles/variables.scss';
+
+@import '/src/blocks/room-info/room-info.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+.room-card {
+    width:270px;
+    height:257px;
+    background-color:#fff;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #FFF;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
+    position: relative;
+    z-index: 1;
+
+    &__info {
+        display:flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    &__content {
+        padding:17px 20px;
+    }
+
+    &__line {
+        border:1px solid rgba(31, 32, 65, 0.10);
+        height:1px;
+        margin: 12px 0px 0 0px;
+    }
+
+    &__reviews-count {
+        color: var(--dark-50, rgba(31, 32, 65, 0.50));
+        text-align: right;
+        font-family: $font-family-default;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px; /* 128.571% */
+    }
+
+    &__reviews-text {
+        color: var(--dark-50, rgba(31, 32, 65, 0.50));
+        text-align: right;
+        font-family: $font-family-default;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 128.571% */
+    }
+
+    .swiper-slide__image {
+        width:270px;
+        height:150px;
+    }
+
+    .swiper-pagination {
+        text-align:right;
+    }
+
+    .swiper-pagination-bullet {
+        opacity: 1;
+        border:1px solid white;
+        background:none;
+    }
+
+    .swiper-pagination-bullet-active {
+        background:white;
+    }
+
+    .swiper-button-prev:after, .swiper-button-next:after {
+        font-family: 'Material Symbols Outlined';
+    }
+
+    .swiper-button-next:after {
+        content: 'chevron_right';
+    }
+
+    .swiper-button-prev:after {
+        content: 'chevron_left';
+    }
+
+    .swiper-pagination-horizontal {
+        padding-right: 12px;
+    }
+
+
+
+    --swiper-theme-color:#fff;
+    --swiper-navigation-size:22px;
+    --swiper-pagination-bullet-horizontal-gap:2px;
+}
+
