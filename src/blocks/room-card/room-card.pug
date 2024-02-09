@@ -8,17 +8,15 @@ mixin room-card(params)
             isLuxury=0,
             room_price='',
             reviews_count='',
-            rating=''
+            rating='',
         }=params
-
         
     .room-card
         .swiper
             .swiper-wrapper
-                .swiper-slide
-                    img.swiper-slide__image(src=require("../../assets/images/room1.png"), alt="")
-                .swiper-slide
-                    img.swiper-slide__image(src=require("../../assets/images/room2.png"), alt="")
+                each image in images
+                    .swiper-slide
+                        img.swiper-slide__image(src=require('../../assets/images/'+image), alt="")
             .swiper-pagination
             .swiper-button-prev
             .swiper-button-next
@@ -38,7 +36,7 @@ mixin room-card(params)
             
             .room-card__info
                 .room-info__wrapper 
-                    +rating('rating', 5)
-                    .room-card__reviews-count='145 '
-                    .room-card__reviews-text=' Отзывов'
+                    +rating('element-' + Math.floor(Math.random() * 1000), reviews_count)
+                    .room-card__reviews-count='145'+" "
+                    .room-card__reviews-text=` Отзывов`
 

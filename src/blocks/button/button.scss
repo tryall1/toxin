@@ -4,7 +4,6 @@
     border-radius: 20px;
     border: none;
     cursor: pointer;
-    //height: 44px;
     font-size: 12px;
     padding: 14px 19px;
     font-family: $font-family-default;
@@ -32,7 +31,7 @@
         left: -2px;
         right: -2px;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        border-radius: 20px;
+        border-radius: 22px;
         z-index: -1;
     }
 
@@ -49,7 +48,6 @@
         color: var(--Primary-Color, #BC9CFF);
         opacity: 1 !important;
         height: 100%;
-
     }
 
     &--big {
