@@ -2,11 +2,13 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 70px;
     font-family: $font-family-default;
     background: #FFF;
+    position: relative;
+    z-index:1;
   
       @media (max-width: 768px) {
           .button {
@@ -31,6 +33,13 @@
           height: 8px;
           display: inline-block;
           margin-left: 2px;
+      }
+
+      .header__navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:20px;
       }
   
        /*
