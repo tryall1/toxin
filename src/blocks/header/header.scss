@@ -1,0 +1,70 @@
+@import '/src/styles/variables.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    font-family: $font-family-default;
+    background: #FFF;
+  
+      @media (max-width: 768px) {
+          .button {
+              display: none;
+          }
+      }
+  
+      .auth {
+          padding-left: 20px;
+      }
+  
+      .auth__separator {
+          width: 1px;
+          height: 30px;
+          background-color: var(--dark-10, rgba(31, 32, 65, 0.10));
+          margin-left: 20px;
+      }
+  
+      .expander-icon {
+          background: url('../../assets/images/expand_more.svg') top no-repeat;
+          width: 24px;
+          height: 8px;
+          display: inline-block;
+          margin-left: 2px;
+      }
+  
+       /*
+      .button {
+          border-radius: 20px;
+          margin-left: 21px;
+          border: none;
+          cursor: pointer;
+          font-size: 12px;
+          padding: 10px 20px;
+          font-family: $font-family-default;
+          font-weight: 700;
+          box-sizing: border-box;
+          z-index:5000;
+      }
+  
+     
+      .button--unfilled {
+          position: relative;
+          background-color: white;
+          color: var(--primary-color, #BC9CFF);
+          font-family: Montserrat;
+          font-size: 12px;
+          font-style: normal;
+          padding: 8px 18.5px;
+      }
+  
+      
+  
+      .button--filled {
+          background: var(--primary-gradient, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%));
+          color: #FFF;
+          margin-right: 0px;
+      }
+      */
+
+  }

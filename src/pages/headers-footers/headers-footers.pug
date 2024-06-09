@@ -1,0 +1,18 @@
+include ../../blocks/icon/icon
+include ../../blocks/header/header
+
+- var nav_menu = [{'name': 'О нас', 'link': '/'}, {'name': 'Услуги', 'link': '/about-us', 'subitems': [{'name': 'Консультации', 'link': '/consulting'}, {'name': 'Разработка', 'link': '/development'}, {'name': 'Проектирование', 'link': '/project'}]}, {'name': 'Вакансии', 'link': '/vacancy'}, {'name': 'Новости', 'link': '/news'}, {'name': 'Соглашения', 'link': '/agreements', 'subitems': [{'name': 'Пользовательское соглашение', 'link': '/user-agreement'}, {'name': 'Политика конфиденциальности', 'link': '/privacy-policy'}]}];
+- var current_url = '/';
+- var auth = false;
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        header.form__header
+            .ui__logo
+                +icon('Group', '42px','42px')
+        +header(nav_menu)

@@ -32,7 +32,7 @@
         right: -2px;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         border-radius: 22px;
-        z-index: -1;
+        z-index: -100;
     }
 
     &--filled {
@@ -66,6 +66,8 @@
         width: 44px;
         height: 44px;
     }
+
+
 
 }
 

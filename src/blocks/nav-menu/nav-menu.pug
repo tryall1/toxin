@@ -1,0 +1,12 @@
+
+mixin nav(navItems, style='navbar')
+   ul(class=style)
+      each key in navItems
+         li.nav__item
+               a(href=key.link class=(key.link === current_url ? "nav__link nav__link--active" : "nav__link"))=key.name
+               if key.subitems
+                  div.expander-icon
+                  ul.nav__submenu
+                     each subitem in key.subitems
+                        li.nav__subitem
+                           a(href=subitem.link).nav__sublink=subitem.name

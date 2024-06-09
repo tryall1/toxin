@@ -1,0 +1,63 @@
+@import '/src/styles/variables.scss';
+
+.navbar {
+    margin-left: auto;
+}
+
+.nav__submenu {
+    position: absolute;
+    margin: 8px 0 0 2px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s, visibility 0.6s;
+}
+
+.nav__item:hover .nav__submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav__item:hover .expander-icon {
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+
+.nav__subitem {
+    margin-top: 4%;
+}
+
+.nav__sublink:hover {
+    text-decoration: none;
+}
+
+.nav_items {
+    display: flex;
+    flex-direction: row;
+}
+
+li.nav__item {
+    align-items: center;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.nav__link, .auth {
+    color: $dark-50;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav__link--active {
+    color: rgba(31, 32, 65, 0.75);
+    font-weight: 700;
+}
+
+.nav__item:last-child {
+    margin-right: 0px;
+}
+
+.nav__sublink {
+    @extend .nav__link;
+    text-decoration: underline;
+    font-size: 12px;
+}

@@ -187,6 +187,7 @@
     &-hover {
         border: 1px solid var(--dark-50, rgba(31, 32, 65, 0.50));
         @include placeholder(var(--dark-75, rgba(31, 32, 65, 0.75)));
+        opacity:1;
     }
     
     &:hover,
