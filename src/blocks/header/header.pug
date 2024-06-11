@@ -4,13 +4,14 @@ include ../logo/logo
 
 mixin header(nav_menu, auth)
     .header
-        +logo('images/logo.svg', 'logo here')
-        .header__navbar
-            nav(class='nav')
-                +nav(nav_menu,'nav_items')
-            if auth==true
-                .auth__separator
-                a.auth Юлий Цезарь
-            else
-                +button({isFilled : false, text:'ВОЙТИ'})
-                +button({isFilled : true, text:'ЗАРЕГИСТРИРОВАТЬСЯ'})
+        .header__wrapper
+            +logo('images/logo.svg', 'logo here')
+            .header__navbar
+                nav(class='nav')
+                    +nav(nav_menu,'nav_items')
+                if auth==true
+                    .auth__separator
+                    a.auth Юлий Цезарь
+                else
+                    +button({isFilled : false, text:'ВОЙТИ'})
+                    +button({isFilled : true, text:'ЗАРЕГИСТРИРОВАТЬСЯ'})
