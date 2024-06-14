@@ -7,6 +7,8 @@
     border: 1px solid rgba(0, 0, 0, 0.12);
     background: #FFF;
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
+    max-width:380px;
+    max-height:374px;
 
     h2.room-search__header {
         color: var(--dark-100, #1F2041);
@@ -15,6 +17,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin-bottom: 20px;
     }
 
     .form__date {
@@ -31,6 +34,7 @@
 
     .field__heading {
         font-family: $font-family-default;
+        margin-top: 10px;
     }
 
     .button--big {
