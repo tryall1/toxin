@@ -13,6 +13,7 @@ import '../../blocks/pagination';
 import '../../blocks/bullet';
 import '../../blocks/pros';
 import '../../blocks/review';
+
 import IMask from 'imask'
 
 //Data mask
@@ -43,7 +44,6 @@ $(document).ready(function() {
     $('#dropdown-open').iqDropdown(options);
     $('#dropdown-open').addClass('menu-open');
 });
-
 
 var options_guest = {
     setSelectionText: function setSelectionText(itemCount, totalItems) {

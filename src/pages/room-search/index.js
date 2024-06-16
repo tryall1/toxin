@@ -1,6 +1,13 @@
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-import './dropdown.scss';
+import './room-search.scss'
+import '../../blocks/header'
+import '../../blocks/footer'
+import '../../blocks/field-heading'
+import '../../blocks/field-input'
+import '../../blocks/dropdown'
+import '../../blocks/range-slider'
+import '../../blocks/checkbox-buttons';
+//import '../../blocks/room-search';
+
 
 $(document).ready(function() {
     // Инициализация iqdropdown
@@ -31,3 +38,4 @@ $(document).ready(function() {
     $('#dropdown_guest').iqDropdown(options_guest);
     $('#dropdown').iqDropdown(options);
 });
+

@@ -31,10 +31,9 @@ new AirDatepicker('#date_range', {
     },
 })
 
-var startDate = document.querySelector('#start_date');
 
 // Получить значение атрибута placeholder
-var startDateValue = startDate.getAttribute('placeholder');
+var startDateValue = document.getElementById('startDate')?.getAttribute('placeholder') || '';
 
 //Several inputs in date picker
 let startDatepicker = new AirDatepicker('#start_date', {
@@ -59,10 +58,9 @@ let startDatepicker = new AirDatepicker('#start_date', {
   }
 });
 
-
 var endDate = document.querySelector('#end_date');
-// Получить значение атрибута placeholder
-var endDateValue = endDate.getAttribute('placeholder');
+var endDateValue = endDate?.getAttribute('placeholder') || '';
+
 
 let endDatepicker = new AirDatepicker('#end_date', {
   dateFormat: 'dd.MM.yyyy',
