@@ -10,8 +10,18 @@ import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
 function parseDateFromPlaceholder(inputElement) {
-  const dateString = inputElement.getAttribute('placeholder');
-  return dateString ? new Date(dateString.split('.').reverse().join('-')) : null;
+
+  if (inputElement) {
+    const dateString = inputElement.getAttribute('placeholder');
+    if (dateString) {
+      return new Date(dateString.split('.').reverse().join('-'));
+    } else {
+      return null;
+    }
+  } else {
+    return null;
+  }
+
 }
 
 var startDateInput = document.querySelector('#start_date2');
@@ -50,6 +60,7 @@ let datepicker = new AirDatepicker(startDateInput, {
 
 });
 
+if(endDateInput) {
 endDateInput.addEventListener('click', function() {
   let currentStartDate = startDateInput.value;
 
@@ -60,7 +71,9 @@ endDateInput.addEventListener('click', function() {
 
   datepicker.show();
 });
+}
 
+if(startDateInput) {
 startDateInput.addEventListener('click', function() {
   let currentStartDate = startDateInput.value ? new Date(startDateInput.value.split('.').reverse().join('-')) : null;
   let currentEndDate = endDateInput.value ? new Date(endDateInput.value.split('.').reverse().join('-')) : null;
@@ -72,6 +85,7 @@ startDateInput.addEventListener('click', function() {
 
   datepicker.show();
 });
+}
 
 // Установка начального значения endDateInput, если обе даты предоставлены
 if (startDate && endDate) {

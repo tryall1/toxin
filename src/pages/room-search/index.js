@@ -7,10 +7,13 @@ import '../../blocks/dropdown'
 import '../../blocks/range-slider'
 import '../../blocks/checkbox-buttons';
 //import '../../blocks/room-search';
+import '../../blocks/room-info'
+import '../../blocks/room-card'
+import '../../blocks/pagination'
+
 
 
 $(document).ready(function() {
-    // Инициализация iqdropdown
     var options_guest = {
         setSelectionText: function setSelectionText(itemCount, totalItems) {
             if (totalItems === 0) {
@@ -38,4 +41,3 @@ $(document).ready(function() {
     $('#dropdown_guest').iqDropdown(options_guest);
     $('#dropdown').iqDropdown(options);
 });
-
